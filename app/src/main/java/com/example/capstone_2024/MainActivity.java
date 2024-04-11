@@ -1,24 +1,74 @@
 package com.example.capstone_2024;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button homebtn;
+    Button cookbtn;
+    Button healthbtn;
+    Button setbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        homebtn = findViewById(R.id.home);
+        cookbtn = findViewById(R.id.cook);
+        healthbtn = findViewById(R.id.health);
+        setbtn = findViewById(R.id.setting);
+
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
         });
+
+        cookbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCookActivity();
+            }
+        });
+
+        healthbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHealthActivity();
+            }
+        });
+
+        setbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSetActivity();
+            }
+        });
+    }
+    public void openHomeActivity() {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openCookActivity() {
+        Intent intent = new Intent(MainActivity.this, Cook.class);
+        startActivity(intent);
+    }
+
+    public void openHealthActivity() {
+        Intent intent = new Intent(MainActivity.this, Health.class);
+        startActivity(intent);
+    }
+
+    public void openSetActivity() {
+        Intent intent = new Intent(MainActivity.this, Cook.class);
+        startActivity(intent);
     }
 }
