@@ -23,7 +23,7 @@
             android:background="@color/white"
             android:textColor="#009422"
             android:textSize="35sp"
-            android:shadowColor="#A8A8A8"
+            android:shadowColor="#00A025"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="5"
@@ -60,42 +60,11 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:clickable="true">
-            <LinearLayout
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="음식">
-                    </androidx.appcompat.widget.AppCompatButton>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="재료">
-                    </androidx.appcompat.widget.AppCompatButton>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                android:layout_height="match_parent">
 
-                </TableLayout>
-            </LinearLayout>
+            </TableLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
