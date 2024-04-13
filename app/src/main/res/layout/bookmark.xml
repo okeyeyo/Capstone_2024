@@ -93,11 +93,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-                <TableLayout
+                <ListView
+                    android:id="@+id/bookmark_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                </TableLayout>
+                </ListView>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
