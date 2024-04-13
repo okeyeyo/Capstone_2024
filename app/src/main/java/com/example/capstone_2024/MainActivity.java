@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button homebtn;
     Button cookbtn;
     Button healthbtn;
-    Button setbtn;
+    Button bookmarkbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         homebtn = findViewById(R.id.home);
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
-        setbtn = findViewById(R.id.setting);
+        bookmarkbtn = findViewById(R.id.bookmark);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        setbtn.setOnClickListener(new View.OnClickListener() {
+        bookmarkbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSetActivity();
