@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSetActivity() {
-        Intent intent = new Intent(MainActivity.this, Cook.class);
+        Intent intent = new Intent(MainActivity.this, Bookmark.class);
         startActivity(intent);
     }
 }
