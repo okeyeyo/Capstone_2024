@@ -48,7 +48,6 @@
                 android:id="@+id/search"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginTop="10dp"
                 android:focusable="true"
                 android:padding="30dp"
                 app:iconifiedByDefault="false"
@@ -56,16 +55,13 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:clickable="true">
-            <ListView
-                android:id="@+id/cook_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-            </ListView>
+        <include layout="@layout/cook_row_list"></include>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
