@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class Login extends AppCompatActivity {
+public class Join extends AppCompatActivity {
 
     Button loginbtn;
 
@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
         });
     }
     public void openHomeActivity() {
-        Intent intent = new Intent(Login.this, MainActivity.class);
+        Intent intent = new Intent(Join.this, MainActivity.class);
         startActivity(intent);
     }
 
