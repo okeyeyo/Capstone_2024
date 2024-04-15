@@ -11,6 +11,9 @@ import android.widget.Button;
 public class Health extends AppCompatActivity {
 
     Button homebtn;
+    Button strechbtn;
+    Button recvrbtn;
+    Button musclebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +21,29 @@ public class Health extends AppCompatActivity {
         setContentView(R.layout.health);
 
         homebtn = findViewById(R.id.home);
+        strechbtn = findViewById(R.id.streching);
+        recvrbtn = findViewById(R.id.recovery);
+        musclebtn = findViewById(R.id.muscle);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
+        });
+        strechbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
+        });
+        recvrbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
+        });
+        musclebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomeActivity();

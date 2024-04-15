@@ -10,9 +10,10 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button homebtn;
+    Button profilebtn;
     Button cookbtn;
     Button healthbtn;
-    Button setbtn;
+    Button starbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +21,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         homebtn = findViewById(R.id.home);
+        profilebtn = findViewById(R.id.profile);
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
-        setbtn = findViewById(R.id.setting);
+        starbtn = findViewById(R.id.setting);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomeActivity();
             }
+        });
+
+        profilebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {openProfileActivity();}
         });
 
         cookbtn.setOnClickListener(new View.OnClickListener() {
@@ -45,15 +52,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        setbtn.setOnClickListener(new View.OnClickListener() {
+        starbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSetActivity();
             }
         });
+
+
     }
     public void openHomeActivity() {
         Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openProfileActivity() {
+        Intent intent = new Intent(MainActivity.this, Cook.class);
         startActivity(intent);
     }
 
