@@ -15,7 +15,10 @@
         <activity
             android:name=".Cook"
             android:exported="true"/>
+<<<<<<< HEAD
 
+=======
+>>>>>>> bd7bd6e9beb14d36a18a1ad456cc319c74641742
         <activity
             android:name=".Health"
             android:exported="true"/>
