@@ -34,19 +34,19 @@ public class Health extends AppCompatActivity {
         strechbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeActivity();
+                openStrechingActivity();
             }
         });
         recvrbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeActivity();
+                openRecoveryActivity();
             }
         });
         musclebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeActivity();
+                openMuscleActivity();
             }
         });
     }
@@ -55,4 +55,16 @@ public class Health extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openStrechingActivity() {
+        Intent intent = new Intent(Health.this, Streching.class);
+        startActivity(intent);
+    }
+    public void openRecoveryActivity() {
+        Intent intent = new Intent(Health.this,Recovery.class);
+        startActivity(intent);
+    }
+    public void openMuscleActivity() {
+        Intent intent = new Intent(Health.this, Muscle.class);
+        startActivity(intent);
+    }
 }

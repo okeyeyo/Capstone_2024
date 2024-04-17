@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".Streching">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#87CFD8"
-                        android:text="<목록>"
+                        android:text="-목록-"
                         android:textAlignment="center"
                         android:textSize="30dp"/>
 
@@ -135,7 +135,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="<설명>"
+                    android:text="- 설명"
                     android:textSize="20dp"/>
                 <CheckBox
                     android:layout_width="match_parent"
@@ -153,9 +153,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="순서 설명
-\n1. 모가지 돌려
-\n2. 모가지 올려
-\n3. 모가지 내려">
+\n1. 목 돌리기(15초)
+\n2. 목을 위로 쭉 피기(10초)
+\n3. 목을 아래로 쭉 피기(10초)
+\n4. 준비중...">
                 </TextView>
             </LinearLayout>
         </LinearLayout>

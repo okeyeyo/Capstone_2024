@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     Button homebtn;
-    Button profilebtn;
+    LinearLayout profilebtn;
     Button cookbtn;
     Button healthbtn;
     Button starbtn;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openProfileActivity() {
-        Intent intent = new Intent(MainActivity.this, Cook.class);
+        Intent intent = new Intent(MainActivity.this, Profile.class);
         startActivity(intent);
     }
 

@@ -10,25 +10,13 @@ import android.widget.Button;
 
 public class FindID extends AppCompatActivity {
 
-    Button loginbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.findid);
 
-        loginbtn = findViewById(R.id.login);
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHomeActivity();
-            }
-        });
-    }
-    public void openHomeActivity() {
-        Intent intent = new Intent(FindID.this, MainActivity.class);
-        startActivity(intent);
     }
 
 }

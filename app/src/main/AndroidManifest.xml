@@ -16,7 +16,31 @@
             android:name=".Cook"
             android:exported="true"/>
         <activity
+            android:name=".Login"
+            android:exported="true"/>
+        <activity
+            android:name=".Recovery"
+            android:exported="true"/>
+        <activity
+            android:name=".Streching"
+            android:exported="true"/>
+        <activity
+            android:name=".Muscle"
+            android:exported="true"/>
+        <activity
+            android:name=".FindID"
+            android:exported="true"/>
+        <activity
+            android:name=".FindPW"
+            android:exported="true"/>
+        <activity
+            android:name=".Join"
+            android:exported="true"/>
+        <activity
             android:name=".Health"
+            android:exported="true"/>
+        <activity
+            android:name=".Profile"
             android:exported="true"/>
 
         <activity
@@ -24,7 +48,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
