@@ -6,32 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF"
-    tools:context=".Bookmark">
+    android:background="@color/white"
+    tools:context=".Cook">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="#87CFD8"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/home"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@color/white"
-            android:textColor="#009422"
-            android:textSize="35sp"
-            android:shadowColor="#00A025"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:textStyle="bold"
-
-            android:text="건강하조" />
-        />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="건강하조(home)" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +27,28 @@
         android:orientation="vertical"
         android:background="@color/white">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30dp"
+                android:text="검색창">
+            </TextView>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text=":             ">
+            </EditText>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -53,42 +63,21 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:layout_weight="1">
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/health_bookmark"
-                        android:layout_width="190dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/buttonshape"
-                        android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="25sp"
-                        android:shadowColor="#757575"
-                        android:shadowDx="0"
-                        android:shadowDy="0"
-                        android:shadowRadius="5"
-                        android:text="운동">
+                        android:text="음식">
                     </androidx.appcompat.widget.AppCompatButton>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:layout_weight="1">
-
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/cook_bookmark"
-                        android:layout_width="190dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/buttonshape"
-                        android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="25sp"
-                        android:shadowColor="#757575"
-                        android:shadowDx="0"
-                        android:shadowDy="0"
-                        android:shadowRadius="5"
-                        android:text="요리">
+                        android:text="재료">
                     </androidx.appcompat.widget.AppCompatButton>
                 </LinearLayout>
             </LinearLayout>
@@ -96,11 +85,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-                <ListView
-                    android:id="@+id/bookmark_list"
+                <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                </ListView>
+
+                </TableLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
