@@ -10,16 +10,16 @@ import android.widget.Button;
 
 public class Profile extends AppCompatActivity {
 
-    Button loginbtn;
+    Button homebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.profile);
 
-        loginbtn = findViewById(R.id.login);
+        homebtn = findViewById(R.id.home);
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+        homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomeActivity();
