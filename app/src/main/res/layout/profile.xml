@@ -18,11 +18,7 @@
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="   건강하조   "
-            android:textColor="#009422"
-            android:textStyle="bold"
-            android:textSize="20dp"
-
+            android:text="건강하조(home)"
             />
     </LinearLayout>
     <LinearLayout
@@ -67,7 +63,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="프로필"
-                    android:textStyle="bold"
                     android:textSize="30dp"/>
 
                 <LinearLayout
@@ -80,7 +75,6 @@
                         android:layout_weight="1"
                         android:text="키        :"
                         android:textAlignment="center"
-                        android:textStyle="bold"
                         android:textSize="20dp"/>
                     <EditText
                         android:id="@+id/cm"
@@ -104,7 +98,6 @@
                         android:layout_weight="1"
                         android:text="몸무게 :"
                         android:textAlignment="center"
-                        android:textStyle="bold"
                         android:textSize="20dp"/>
                     <EditText
                         android:id="@+id/kg"
@@ -126,7 +119,6 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="성별     :"
-                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <EditText
@@ -150,7 +142,6 @@
                         android:layout_weight="1"
                         android:text="나이     :"
                         android:textAlignment="center"
-                        android:textStyle="bold"
                         android:textSize="20dp"/>
                     <EditText
                         android:id="@+id/age"
@@ -172,7 +163,6 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="직업     :"
-                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <EditText
@@ -199,7 +189,6 @@
             android:layout_margin="5dp"
             android:text="저장"
             android:clickable="true"
-            android:textStyle="bold"
             android:background="#97DFE8" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -208,7 +197,6 @@
             android:layout_margin="5dp"
             android:text="취소"
             android:clickable="true"
-            android:textStyle="bold"
             android:background="#97DFE8"/>
 
     </LinearLayout>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".Recovery">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,17 +46,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#87CFD8"
-                        android:text="<목록>"
+                        android:text="    -목록-"
                         android:textAlignment="center"
                         android:textSize="30dp"/>
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/button1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="머리"
-                        android:textSize="20dp"
-                        android:clickable="true"/>
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button2"
                         android:layout_width="match_parent"
@@ -135,7 +129,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="<설명>"
+                    android:text="- 설명"
                     android:textSize="20dp"/>
                 <CheckBox
                     android:layout_width="match_parent"
