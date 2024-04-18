@@ -6,19 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="#FFFFFF"
     tools:context=".Cook">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#87CFD8"
-        android:orientation="horizontal">
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="건강하조(home)" />
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:textColor="#009422"
+            android:textSize="35sp"
+            android:shadowColor="#00A025"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textStyle="bold"
+
+            android:text="건강하조" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,59 +44,24 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-
-
-
             <androidx.appcompat.widget.SearchView
-                android:id="@+id/search_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:focusable="true"
+                android:padding="30dp"
                 app:iconifiedByDefault="false"
                 app:queryHint="검색어를 입력하시오" />
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:clickable="true">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="음식">
-                    </androidx.appcompat.widget.AppCompatButton>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="재료">
-                    </androidx.appcompat.widget.AppCompatButton>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                </TableLayout>
-            </LinearLayout>
+        <include layout="@layout/cook_row_list"></include>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

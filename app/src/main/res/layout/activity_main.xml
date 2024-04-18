@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:clickable="true"
-            android:text="안건강하조(home)" />
+            android:text="건강하조(home)" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
