@@ -7,18 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Bookmark extends AppCompatActivity {
 
-    Button homebtn;
+public class Login extends AppCompatActivity {
+
+    Button loginbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bookmark);
+        setContentView(R.layout.login);
 
-        homebtn = findViewById(R.id.home);
+        loginbtn = findViewById(R.id.login);
 
-        homebtn.setOnClickListener(new View.OnClickListener() {
+        loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomeActivity();
@@ -26,8 +27,8 @@ public class Bookmark extends AppCompatActivity {
         });
     }
     public void openHomeActivity() {
-        Intent intent = new Intent(Bookmark.this, MainActivity.class);
+        Intent intent = new Intent(Login.this, MainActivity.class);
         startActivity(intent);
     }
-}
 
+}
