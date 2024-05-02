@@ -8,29 +8,46 @@
     android:orientation="vertical"
     android:background="#FFFFFF"
     tools:context=".Cook">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
+        android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/home"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:text="건강하조(home)" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_notification_all"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="20dp"
-            android:background="@color/white"
-            android:textColor="#009422"
-            android:textSize="35sp"
-            android:shadowColor="#00A025"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:textStyle="bold"
+            android:layout_height="wrap_content" />
 
-            android:text="건강하조" />
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,16 +69,25 @@
                 android:padding="30dp"
                 app:iconifiedByDefault="false"
                 app:queryHint="검색어를 입력하시오" />
+
         </LinearLayout>
-        <LinearLayout
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:clickable="true">
+            android:layout_height="match_parent">
 
-            <include layout="@layout/cook_row_list"></include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <include layout="@layout/cook_row_list"></include>
+
+                <include layout="@layout/cook_row_list"></include>
+
+                <include layout="@layout/cook_row_list"></include>
+
+                <include layout="@layout/cook_row_list"></include>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </LinearLayout>
