@@ -37,8 +37,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    // 41번 http 통신을 도와주는 라이브러리
-    implementation(libs.okhttp)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
