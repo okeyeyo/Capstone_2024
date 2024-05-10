@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         homebtn = findViewById(R.id.home);
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
-        setbtn = findViewById(R.id.setting);
+        setbtn = findViewById(R.id.bookmark);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
