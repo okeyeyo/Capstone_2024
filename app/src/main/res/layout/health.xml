@@ -61,7 +61,7 @@
 
 
                     <ImageButton
-                        android:id="@+id/bookmark_button"
+                        android:id="@+id/_button1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginHorizontal="20dp"
@@ -71,7 +71,7 @@
                         android:src="@drawable/play_36" />
 
                     <ImageButton
-                        android:id="@+id/bookmark_button"
+                        android:id="@+id/_button2"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:background="@color/cardview_shadow_end_color"
