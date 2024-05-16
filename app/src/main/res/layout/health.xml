@@ -98,13 +98,6 @@
                     android:text="스트레칭"
                     android:clickable="true"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/recovery"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="재활 운동"
-                    android:clickable="true"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/muscle"
@@ -114,26 +107,8 @@
                     android:text="근력 운동"
                     android:clickable="true"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="(추가 준비중)"
-                    android:clickable="true"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="추가 준비중..."
-                    android:clickable="true"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="추가 준비.."
-                    android:clickable="true"/>
 
             </LinearLayout>
         </ScrollView>
