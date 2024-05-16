@@ -50,6 +50,14 @@
                     >
 
                 </ImageView>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_launcher_foreground">
+
+                </ImageView>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -177,30 +185,40 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:clickable="true">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cook"
-                android:layout_width="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="요리"
-                android:layout_margin="20dp"
-                android:clickable="true"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/health"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="운동"
-                android:layout_margin="20dp"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/setting"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="설정"
-                android:layout_margin="20dp"
-                android:clickable="true"/>
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true">
 
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="요리"
+                    android:layout_margin="20dp"
+                    android:clickable="true"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="운동"
+                    android:layout_margin="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
