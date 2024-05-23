@@ -22,7 +22,6 @@ public class Health extends AppCompatActivity {
 
         homebtn = findViewById(R.id.home);
         strechbtn = findViewById(R.id.streching);
-        recvrbtn = findViewById(R.id.recovery);
         musclebtn = findViewById(R.id.muscle);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
