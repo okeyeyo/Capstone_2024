@@ -29,6 +29,12 @@
             android:textSize="18dp"
             android:clickable="true"
             android:text="뒤로가기" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            app:videoId="giQE_5yiG_A"
+            app:autoPlay="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 
