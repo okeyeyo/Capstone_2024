@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     Button homebtn;
     Button cookbtn;
     Button healthbtn;
+    LinearLayout profilebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         homebtn = findViewById(R.id.home);
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
+        profilebtn = findViewById(R.id.profile);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        profilebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openprofilebtnActivity();
+            }
+        });
     }
     public void openHomeActivity() {
         Intent intent = new Intent(MainActivity.this, MainActivity.class);
@@ -56,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openHealthActivity() {
         Intent intent = new Intent(MainActivity.this, Health.class);
+        startActivity(intent);
+    }
+
+    public void openprofilebtnActivity() {
+        Intent intent = new Intent(MainActivity.this, Profile.class);
         startActivity(intent);
     }
 
