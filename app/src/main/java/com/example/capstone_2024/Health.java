@@ -8,29 +8,27 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class Health extends AppCompatActivity {
+public class Health extends AppCompatActivity{
 
-    Button homebtn;
     Button strechbtn;
     Button recvrbtn;
     Button musclebtn;
-
+    Button homebtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.health);
 
-        homebtn = findViewById(R.id.home);
         strechbtn = findViewById(R.id.streching);
         musclebtn = findViewById(R.id.muscle);
+        homebtn = findViewById(R.id.home);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeActivity();
+                openhomeActivity();
             }
         });
-
         strechbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,11 +44,10 @@ public class Health extends AppCompatActivity {
         });
 
     }
-    public void openHomeActivity() {
-        Intent intent = new Intent(Health.this, MainActivity.class);
+    public void openhomeActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
     public void openStrechingActivity() {
         Intent intent = new Intent(Health.this, Streching.class);
         startActivity(intent);

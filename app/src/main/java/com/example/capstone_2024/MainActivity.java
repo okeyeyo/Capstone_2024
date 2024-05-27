@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button cookbtn;
     Button healthbtn;
     LinearLayout profilebtn;
+    Button homebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,14 @@ public class MainActivity extends AppCompatActivity {
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
         profilebtn = findViewById(R.id.profile);
+        homebtn = findViewById(R.id.home);
 
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openhomeActivity();
+            }
+        });
 
         cookbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void openhomeActivity() {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
     public void openCookActivity() {
         Intent intent = new Intent(MainActivity.this, Cook.class);
         startActivity(intent);
