@@ -6,15 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     Button homebtn;
-    LinearLayout profilebtn;
     Button cookbtn;
     Button healthbtn;
-    Button starbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +19,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         homebtn = findViewById(R.id.home);
-        profilebtn = findViewById(R.id.profile);
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
-        starbtn = findViewById(R.id.setting);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomeActivity();
             }
-        });
-
-        profilebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {openProfileActivity();}
         });
 
         cookbtn.setOnClickListener(new View.OnClickListener() {
@@ -53,22 +43,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        starbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSetActivity();
-            }
-        });
-
-
     }
     public void openHomeActivity() {
         Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void openProfileActivity() {
-        Intent intent = new Intent(MainActivity.this, Profile.class);
         startActivity(intent);
     }
 
@@ -82,8 +59,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openSetActivity() {
-        Intent intent = new Intent(MainActivity.this, Cook.class);
-        startActivity(intent);
-    }
 }

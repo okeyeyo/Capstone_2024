@@ -15,7 +15,7 @@ public class Muscle extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.muscle);
+        setContentView(R.layout.muscle_main_shoulder);
 
         backbtn = findViewById(R.id.back);
 

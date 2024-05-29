@@ -45,7 +45,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@color/cardview_shadow_end_color"
-        android:src="@drawable/emptystar"
+        android:src="@drawable/empty_star"
         android:scaleType="fitCenter"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"

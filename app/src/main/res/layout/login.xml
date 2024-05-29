@@ -21,9 +21,9 @@
                 android:layout_height="match_parent"
                 android:layout_margin="30dp"
                 android:background="#E8E3E3"
-                android:textColor="#009422"
                 android:textSize="35sp"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:text="건강하조" />
         </LinearLayout>
         <LinearLayout
@@ -35,8 +35,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="로그인"
+                android:text="                      로그인"
                 android:textSize="30dp"
+                android:textStyle="bold"
                 android:textAlignment="center">
             </TextView>
         </LinearLayout>
@@ -57,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="  아이디  :  "
+                android:textStyle="bold"
                 android:textSize="35dp"
                 />
             <EditText
@@ -78,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="비밀번호 :  "
+                android:textStyle="bold"
                 android:textSize="35dp"/>
             <EditText
                 android:id="@+id/password"
