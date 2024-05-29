@@ -34,8 +34,8 @@ public class Streching extends AppCompatActivity {
             }
         });
 
-        streching_list_neck1 = findViewById(R.id.str_neck1_player);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+        //treching_list_neck1 = findViewById(R.id.str_neck1_player);
+        /*   LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         params.bottomMargin = 30;
         YouTubePlayerView ypv = new YouTubePlayerView(Streching.this);
@@ -47,6 +47,8 @@ public class Streching extends AppCompatActivity {
                 youTubePlayer.loadVideo("mUnSpfItRf0", 0);
             }
         });
+    */
+
     }
     public void openHomeActivity() {
         Intent intent = new Intent(Streching.this, Health.class);
