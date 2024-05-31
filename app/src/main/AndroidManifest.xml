@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -29,11 +30,46 @@
             android:name=".Muscle"
             android:exported="true" />
         <activity
+            android:name=".FindID"
+            android:exported="true"/>
+        <activity
+            android:name=".FindPW"
+            android:exported="true"/>
+        <activity
+            android:name=".Join"
+            android:exported="true"/>
+
+        <activity
             android:name=".Health"
             android:exported="true" />
         <activity
             android:name=".Profile"
             android:exported="true" />
+
+        <activity
+            android:name=".muscle_back"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_shoulder"
+            android:exported="true"/>
+        <activity
+            android:name=".muscle_arm"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_chest"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_abs"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_leg"
+            android:exported="true"
+            />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

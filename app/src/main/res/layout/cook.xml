@@ -46,6 +46,7 @@
             android:layout_height="wrap_content" />
 
 
+
     </LinearLayout>
 
     <LinearLayout
@@ -69,7 +70,6 @@
                 android:padding="30dp"
                 app:iconifiedByDefault="false"
                 app:queryHint="검색어를 입력하시오" />
-
         </LinearLayout>
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
