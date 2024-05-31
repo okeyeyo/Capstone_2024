@@ -18,33 +18,15 @@
         tools:targetApi="31">
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Bookmark"
             android:exported="true" />
         <activity
             android:name=".Cook"
-            android:exported="true" />
-        <activity
-            android:name=".Login"
-            android:exported="true" />
-        <activity
-            android:name=".Recovery"
             android:exported="true" />
         <activity
             android:name=".Streching"
             android:exported="true" />
         <activity
             android:name=".Muscle"
-            android:exported="true" />
-        <activity
-            android:name=".FindID"
-            android:exported="true" />
-        <activity
-            android:name=".FindPW"
-            android:exported="true" />
-        <activity
-            android:name=".Join"
             android:exported="true" />
         <activity
             android:name=".Health"
