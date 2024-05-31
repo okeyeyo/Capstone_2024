@@ -81,7 +81,7 @@ public class Health extends AppCompatActivity {
     }
 
     public void openMuscleActivity() {
-        Intent intent = new Intent(Health.this, Muscle.class);
+        Intent intent = new Intent(Health.this, muscle_shoulder.class);
         startActivity(intent);
     }
 }
