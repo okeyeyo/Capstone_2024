@@ -23,7 +23,13 @@
             android:exported="true"/>
 
         <activity
-            android:name=".Cook"
+            android:name=".Cook_Ingredient"
+            android:exported="true"/>
+        <activity
+            android:name=".Cook_Recipe"
+            android:exported="true"/>
+        <activity
+            android:name=".Cook_Favorites"
             android:exported="true"/>
 
         <activity

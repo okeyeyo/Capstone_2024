@@ -61,7 +61,7 @@
                 android:focusable="true"
                 android:padding="30dp"
                 app:iconifiedByDefault="false"
-                app:queryHint="검색어를 입력하시오(재료)" />
+                app:queryHint="검색어를 입력하시오(레시피)" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,13 +77,13 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <include layout="@layout/ingredient_row_list"></include>
+                    <include layout="@layout/recipe_row_list"></include>
 
-                    <include layout="@layout/ingredient_row_list"></include>
+                    <include layout="@layout/recipe_row_list"></include>
 
-                    <include layout="@layout/ingredient_row_list"></include>
+                    <include layout="@layout/recipe_row_list"></include>
 
-                    <include layout="@layout/ingredient_row_list"></include>
+                    <include layout="@layout/recipe_row_list"></include>
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
@@ -91,22 +91,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/find_recipe"
-                android:layout_margin="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="레시피 찾기"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:background="#00D4D4"
+            android:orientation="horizontal"
             >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ingredient"
