@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- 6~9번째 줄 internet에 연결하는 코드-->
+    <!-- 6~9번째 줄 internet에 연결하는 코드 -->
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -19,46 +17,47 @@
         android:theme="@style/Theme.Capstone_2024"
         tools:targetApi="31">
         <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".Bookmark"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Cook"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Login"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Recovery"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Streching"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Muscle"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".FindID"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".FindPW"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Join"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Health"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Profile"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
