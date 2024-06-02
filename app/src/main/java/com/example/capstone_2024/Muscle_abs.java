@@ -1,17 +1,17 @@
 package com.example.capstone_2024;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
-
-import org.jetbrains.annotations.NotNull;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 
 public class Muscle_abs extends AppCompatActivity {
+
+    Button cablebtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +20,18 @@ public class Muscle_abs extends AppCompatActivity {
         Muscle.listbtnset(this);
         Muscle.clickrebtn(this);
 
+        cablebtn = findViewById(R.id.button_4);
+
+        cablebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCableActivity();
+            }
+        });
     }
+    public void openCableActivity() {
+        Intent intent = new Intent(Muscle_abs.this, Muscle_abs_cable.class);
+        startActivity(intent);
+    }
+
 }
