@@ -33,7 +33,7 @@ public class Muscle extends AppCompatActivity {
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_back.class);
+                Intent intent = new Intent(activity, Muscle_back.class);
                 activity.startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class Muscle extends AppCompatActivity {
         shobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_shoulder.class);
+                Intent intent = new Intent(activity, Muscle_shoulder.class);
                 activity.startActivity(intent);
             }
         });
@@ -49,28 +49,28 @@ public class Muscle extends AppCompatActivity {
         armbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_arm.class);
+                Intent intent = new Intent(activity, Muscle_arm.class);
                 activity.startActivity(intent);
             }
         });
         chestbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_chest.class);
+                Intent intent = new Intent(activity, Muscle_chest.class);
                 activity.startActivity(intent);
             }
         });
         legbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_leg.class);
+                Intent intent = new Intent(activity, Muscle_leg.class);
                 activity.startActivity(intent);
             }
         });
         absbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_abs.class);
+                Intent intent = new Intent(activity, Muscle_abs.class);
                 activity.startActivity(intent);
             }
         });

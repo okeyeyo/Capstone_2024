@@ -13,9 +13,8 @@ import android.widget.ImageButton;
 
 public class Health extends AppCompatActivity {
 
-    Button homebtn;
+    ImageButton homebtn;
     Button strechbtn;
-    Button recvrbtn;
     Button musclebtn;
     ImageButton startbtn, resetbtn;
     Chronometer chronometer;
@@ -81,7 +80,7 @@ public class Health extends AppCompatActivity {
     }
 
     public void openMuscleActivity() {
-        Intent intent = new Intent(Health.this, muscle_shoulder.class);
+        Intent intent = new Intent(Health.this, Muscle_shoulder.class);
         startActivity(intent);
     }
 }

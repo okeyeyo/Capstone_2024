@@ -11,17 +11,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#87CFD8"
+        android:background="@color/main_color"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <ImageButton
             android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:text="건강하조(home)" />
-
-
+            android:scaleType="centerCrop"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:padding="0dp"
+            android:src="@drawable/main_logo" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
