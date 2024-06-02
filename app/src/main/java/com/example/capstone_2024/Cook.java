@@ -26,7 +26,7 @@ public class Cook extends AppCompatActivity {
     private EditText ingredientsEditText;
     FoodAdapter foodAdapter;
     private final List<Food> foodList = new ArrayList<>();
-    private static final String apiKey = "https://openapi.foodsafetykorea.go.kr/api/221de0c2525840539c5c/COOKRCP01/xml/";
+    private static final String apiKey = "https://openapi.foodsafetykorea.go.kr/api/221de0c2525840539c5c/COOKRCP01/json/";
     private static final String TAG = "Cook";
 
     @Override
@@ -53,6 +53,8 @@ public class Cook extends AppCompatActivity {
 
         recyclerView.setAdapter(foodAdapter);
 
+        // 화면에 들어가자마자 모든 음식을 가져오도록 설정
+        fetchAllFoods();
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,22 +75,47 @@ public class Cook extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void fetchAllFoods(){
+        FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
+        Call<Food> call = apiService.getAllFoods(apiKey); // 모든 음식 가져오는 API 호출
+        call.enqueue(new Callback<Food>() {
+            @Override
+            public void onResponse(@NonNull Call<Food> call, @NonNull Response<Food> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    Food food = response.body();
+                    foodList.clear();
+                    foodList.add(food);
+                    foodAdapter.notifyDataSetChanged();
+                    Log.d(TAG, "fetchAllFoods: Success - Foods loaded");
+
+                } else {
+                    Toast.makeText(Cook.this, "No foods found", Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "fetchAllFoods: Failed to get response");
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<Food> call, @NonNull Throwable t) {
+                Toast.makeText(Cook.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e("Cook", "API call failed", t);  // Log the error
+            }
+        });
+    }
     private void searchFoods() {
         String ingredients = ingredientsEditText.getText().toString().trim(); // 사용자가 입력한 재료 받기
         if (!ingredients.isEmpty()) { // 입력한 재료가 null값이 아니면
             FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
             // api호출해서 음식목록을 가져오기 //FoodApiService에 사용자가 입력한 재료와 api키를 전달
-            Call<List<Food>> call = apiService.searchingredientsFoods(ingredients, apiKey);
-            call.enqueue(new Callback<List<Food>>() {
+            Call<Food> call = apiService.searchingredientsFoods(ingredients, apiKey);
+            call.enqueue(new Callback<Food>() {
                 @Override
-                public void onResponse(@NonNull Call<List<Food>> call, @NonNull Response<List<Food>> response) {
+                public void onResponse(@NonNull Call<Food> call, @NonNull Response<Food> response) {
                     if (response.isSuccessful()) {
-                        List<Food> newFoodList = response.body();
-                        if (newFoodList != null) {
-                            int oldSize = foodList.size();
-                            foodList.addAll(newFoodList);
-                            foodAdapter.notifyItemRangeInserted(oldSize, newFoodList.size());
-                            Log.d(TAG, "fetchAllFoods: Success - Foods loaded");
+                        Food newFood = response.body();
+                        if (newFood != null) {
+                            foodList.add(newFood);
+                            foodAdapter.notifyItemInserted(foodList.size() - 1);
+                            Log.d(TAG, "search: Success - Foods loaded");
                         } else {
                             Toast.makeText(Cook.this, "No foods found", Toast.LENGTH_SHORT).show();
                         }
@@ -97,39 +124,18 @@ public class Cook extends AppCompatActivity {
                         Log.d(TAG, "searchFoods: Failed to get response");
                     }
                 }
-
                 @Override
-                public void onFailure(@NonNull Call<List<Food>> call, @NonNull Throwable t) {
+                public void onFailure(@NonNull Call<Food> call, @NonNull Throwable t) {
                     Toast.makeText(Cook.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
                     Log.e("Cook", "API call failed", t);  // Log the error
                 }
             });
-        } else{
+        } else {
             // 검색어가 비어있을 때의 동작
-            FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
-            Call<List<Food>> call = apiService.getAllFoods(apiKey); // 모든 음식 가져오는 API 호출
-            call.enqueue(new Callback<List<Food>>() {
-                @Override
-                public void onResponse(@NonNull Call<List<Food>> call, @NonNull Response<List<Food>> response) {
-                    if (response.isSuccessful() && response.body() != null) {
-                        foodList.clear();
-                        foodList.addAll(response.body());
-                        foodAdapter.notifyDataSetChanged();
-                        Log.d(TAG, "fetchAllFoods: Success - Foods loaded");
+            fetchAllFoods();
 
-                    } else {
-                        Toast.makeText(Cook.this, "No foods found", Toast.LENGTH_SHORT).show();
-                        Log.d(TAG, "fetchAllFoods: Failed to get response");
-                    }
-                }
-
-                @Override
-                public void onFailure(@NonNull Call<List<Food>> call, @NonNull Throwable t) {
-                    Toast.makeText(Cook.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
-                    Log.e("Cook", "API call failed", t);  // Log the error
-                }
-            });
         }
+
     }
 
 
