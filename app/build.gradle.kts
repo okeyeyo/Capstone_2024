@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
 }
-
 android {
     namespace = "com.example.capstone_2024"
     compileSdk = 34
@@ -38,8 +37,13 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.core)
+    implementation(libs.retrofit) //API 불러올때 사용함
+    implementation(libs.converter.gson)//API 불러올때 사용함
+    implementation("com.github.bumptech.glide:glide:4.12.0")//API 불러올때 사용함
+    implementation("com.squareup.retrofit2:converter-simplexml:2.9.0") //xml파싱할때
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 
 }

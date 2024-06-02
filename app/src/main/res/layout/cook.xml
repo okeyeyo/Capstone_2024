@@ -41,14 +41,21 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/search"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:focusable="true"
-                    android:padding="30dp"
-                    app:iconifiedByDefault="false"
-                    app:queryHint="검색어를 입력하시오" />
+                <EditText
+                    android:id="@+id/ingredientsEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter ingredients"
+                    android:inputType="text"
+                    android:padding="8dp"/>
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:padding="8dp"/>
 
             </LinearLayout>
             <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -60,13 +67,17 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <include layout="@layout/cook_row_list"></include>
 
-                    <include layout="@layout/cook_row_list"></include>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/toolbar"
+                        android:padding="8dp"
+                        android:clipToPadding="false"
+                        android:background="@android:color/white"/>
 
-                    <include layout="@layout/cook_row_list"></include>
 
-                    <include layout="@layout/cook_row_list"></include>
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
