@@ -13,9 +13,8 @@ import android.widget.ImageButton;
 
 public class Health extends AppCompatActivity {
 
-    Button homebtn;
+    ImageButton homebtn;
     Button strechbtn;
-    Button recvrbtn;
     Button musclebtn;
     ImageButton startbtn, resetbtn;
     Chronometer chronometer;

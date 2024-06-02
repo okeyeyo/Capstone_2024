@@ -49,7 +49,7 @@ public class Muscle extends AppCompatActivity {
         armbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_arm.class);
+                Intent intent = new Intent(activity, Muscle_arm.class);
                 activity.startActivity(intent);
             }
         });
@@ -70,7 +70,7 @@ public class Muscle extends AppCompatActivity {
         absbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, muscle_abs.class);
+                Intent intent = new Intent(activity, Muscle_abs.class);
                 activity.startActivity(intent);
             }
         });

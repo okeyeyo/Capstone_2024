@@ -54,7 +54,7 @@
             android:name=".muscle_shoulder"
             android:exported="true"/>
         <activity
-            android:name=".muscle_arm"
+            android:name=".Muscle_arm"
             android:exported="true"
             />
         <activity
@@ -62,7 +62,7 @@
             android:exported="true"
             />
         <activity
-            android:name=".muscle_abs"
+            android:name=".Muscle_abs"
             android:exported="true"
             />
         <activity
