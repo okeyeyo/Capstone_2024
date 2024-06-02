@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-public class muscle_back extends AppCompatActivity {
+public class Muscle_back extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

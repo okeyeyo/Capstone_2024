@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-public class muscle_chest extends AppCompatActivity {
+public class Muscle_chest extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

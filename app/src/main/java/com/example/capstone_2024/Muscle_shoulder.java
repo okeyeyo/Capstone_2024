@@ -2,13 +2,10 @@ package com.example.capstone_2024;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 
-public class muscle_shoulder extends AppCompatActivity {
+public class Muscle_shoulder extends AppCompatActivity {
     boolean display = true;
 
 

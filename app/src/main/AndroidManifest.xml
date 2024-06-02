@@ -47,18 +47,18 @@
             android:exported="true" />
 
         <activity
-            android:name=".muscle_back"
+            android:name=".Muscle_back"
             android:exported="true"
             />
         <activity
-            android:name=".muscle_shoulder"
+            android:name=".Muscle_shoulder"
             android:exported="true"/>
         <activity
             android:name=".Muscle_arm"
             android:exported="true"
             />
         <activity
-            android:name=".muscle_chest"
+            android:name=".Muscle_chest"
             android:exported="true"
             />
         <activity
@@ -66,7 +66,11 @@
             android:exported="true"
             />
         <activity
-            android:name=".muscle_leg"
+            android:name=".Muscle_leg"
+            android:exported="true"
+            />
+        <activity
+            android:name=".Muscle_abs_cable"
             android:exported="true"
             />
 
