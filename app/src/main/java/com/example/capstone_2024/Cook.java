@@ -58,7 +58,8 @@ public class Cook extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchFoods();
+                //searchFoods();
+                nameFoods();
             }
         });
 
@@ -75,7 +76,7 @@ public class Cook extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void fetchAllFoods(){
+    private void fetchAllFoods(){ //검색어가 없을 때 처음에 보여주는음식 리스트들
         FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
         Call<Food> call = apiService.getAllFoods(apiKey); // 모든 음식 가져오는 API 호출
         call.enqueue(new Callback<Food>() {
@@ -101,7 +102,42 @@ public class Cook extends AppCompatActivity {
             }
         });
     }
-    private void searchFoods() {
+    private void nameFoods(){ //이름
+        String name = ingredientsEditText.getText().toString().trim(); // 사용자가 입력한 음식이름
+        if (!name.isEmpty()) { // null값이 아니면
+            FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
+            // api호출해서 음식목록을 가져오기 //FoodApiService에 사용자가 입력한 음식의 이름과 api키를 전달
+            Call<Food> call = apiService.searchnameFood(name, apiKey);
+            call.enqueue(new Callback<Food>() {
+                @Override
+                public void onResponse(@NonNull Call<Food> call, @NonNull Response<Food> response) {
+                    if (response.isSuccessful()) {
+                        Food newFood = response.body();
+                        if (newFood != null) {
+                            foodList.add(newFood);
+                            foodAdapter.notifyItemInserted(foodList.size() - 1);
+                            Log.d(TAG, "search: Success - Foods loaded");
+                        } else {
+                            Toast.makeText(Cook.this, "No foods found", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(Cook.this, "Failed to get response", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "searchFoods: Failed to get response");
+                    }
+                }
+                @Override
+                public void onFailure(@NonNull Call<Food> call, @NonNull Throwable t) {
+                    Toast.makeText(Cook.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                    Log.e("Cook", "API call failed", t);  // Log the error
+                }
+            });
+        } else {
+            // 검색어가 비어있을 때의 동작
+            fetchAllFoods();
+        }
+
+    }
+   /* private void searchFoods() { //재료
         String ingredients = ingredientsEditText.getText().toString().trim(); // 사용자가 입력한 재료 받기
         if (!ingredients.isEmpty()) { // 입력한 재료가 null값이 아니면
             FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
@@ -136,7 +172,7 @@ public class Cook extends AppCompatActivity {
 
         }
 
-    }
+    }*/
 
 
 }
