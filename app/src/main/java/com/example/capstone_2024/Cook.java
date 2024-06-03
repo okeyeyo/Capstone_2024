@@ -40,6 +40,7 @@ public class Cook extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         foodAdapter = new FoodAdapter(foodList, new FoodAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food food) {

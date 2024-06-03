@@ -3,19 +3,28 @@ package com.example.capstone_2024;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Food implements Parcelable { //음식 생성자
 
     private int id;
-    private String name;
-    private String ingredients;
-    private String manual1;
-    private String manual2;
-    // Add more manual attributes up to manual20 as needed
 
-    public Food() { // 기본 생성지
+    @SerializedName("RCP_NM")
+    private String name;
+
+    @SerializedName("RCP_PARTS_DTLS")
+    private String ingredients;
+
+    @SerializedName("MANUAL01")
+    private String manual1;
+
+    @SerializedName("MANUAL02")
+    private String manual2;
+
+    public Food() { // 기본 생성자
         this.id = 0; // 기본값 설정
         this.name = "";
         this.ingredients = "";
