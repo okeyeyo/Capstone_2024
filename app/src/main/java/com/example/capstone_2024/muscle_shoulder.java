@@ -2,6 +2,7 @@ package com.example.capstone_2024;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,13 +16,14 @@ import java.util.Stack;
 public class muscle_shoulder extends AppCompatActivity {
     boolean display = true;
     android.widget.Button[] btn = new Button[7];
+
     Stack<Integer> layoutStack = new Stack<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.muscle_main_shoulder);
-        layoutStack.push(R.layout.muscle_main_shoulder);
+
         Muscle.listbtnset(this);
         Muscle.clickrebtn(this);
 
@@ -41,6 +43,8 @@ public class muscle_shoulder extends AppCompatActivity {
 
         btn_link_set();
 
+
+
     }
 
 
@@ -52,12 +56,14 @@ public class muscle_shoulder extends AppCompatActivity {
     public void btn_link_set(){
 
         btn[0].setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
-
+                androidx.appcompat.widget.AppCompatButton back;
                 setContentView(R.layout.muscle_youtube);
-                Muscle.clickrebtn(muscle_shoulder.this);
+
+
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -67,9 +73,21 @@ public class muscle_shoulder extends AppCompatActivity {
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
+                        startActivity(intent);
+                    }
+                });
+
+
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
+
+            androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
@@ -79,11 +97,22 @@ public class muscle_shoulder extends AppCompatActivity {
                     public void onReady(YouTubePlayer youTubePlayer) {
                         String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
+                    }
+                });
+
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
+                        startActivity(intent);
                     }
                 });
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
+
+            androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
@@ -93,11 +122,21 @@ public class muscle_shoulder extends AppCompatActivity {
                     public void onReady(YouTubePlayer youTubePlayer) {
                         String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
+                    }
+                });
+
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
+                        startActivity(intent);
                     }
                 });
             }
         });
         btn[3].setOnClickListener(new View.OnClickListener() {
+            androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
@@ -107,11 +146,20 @@ public class muscle_shoulder extends AppCompatActivity {
                     public void onReady(YouTubePlayer youTubePlayer) {
                         String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
+                    }
+                });
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
+                        startActivity(intent);
                     }
                 });
             }
         });
         btn[4].setOnClickListener(new View.OnClickListener() {
+            androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
@@ -121,11 +169,20 @@ public class muscle_shoulder extends AppCompatActivity {
                     public void onReady(YouTubePlayer youTubePlayer) {
                         String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
+                    }
+                });
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
+                        startActivity(intent);
                     }
                 });
             }
         });
         btn[5].setOnClickListener(new View.OnClickListener() {
+            androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
@@ -137,9 +194,19 @@ public class muscle_shoulder extends AppCompatActivity {
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
+                        startActivity(intent);
+                    }
+                });
             }
         });
+
         btn[6].setOnClickListener(new View.OnClickListener() {
+            androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
@@ -151,8 +218,17 @@ public class muscle_shoulder extends AppCompatActivity {
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
+                        startActivity(intent);
+                    }
+                });
             }
         });
+
     }
 
 }
