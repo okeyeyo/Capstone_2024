@@ -24,13 +24,6 @@ public class Food implements Parcelable { //음식 생성자
     @SerializedName("MANUAL02")
     private String manual2;
 
-    public Food() { // 기본 생성자
-        this.id = 0; // 기본값 설정
-        this.name = "";
-        this.ingredients = "";
-        this.manual1 = "";
-        this.manual2 = "";
-    }
     public Food(int id, String name, String ingredients, String manual1, String manual2) {
         this.id = id;
         this.name = name;
