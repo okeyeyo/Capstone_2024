@@ -9,85 +9,77 @@
     android:background="#FFFFFF"
     tools:context=".Cook">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/home"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:text="건강하조(home)" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:orientation="horizontal">
-
-
-        </LinearLayout>
-
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/sw_notification_all"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-
-    </LinearLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
 
     <LinearLayout
+        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/white">
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:gravity="center"
+            android:background="@color/white"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/search"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:focusable="true"
-                android:padding="30dp"
-                app:iconifiedByDefault="false"
-                app:queryHint="검색어를 입력하시오" />
         </LinearLayout>
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
 
-                <include layout="@layout/cook_row_list"></include>
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <include layout="@layout/cook_row_list"></include>
+                <EditText
+                    android:id="@+id/ingredientsEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter ingredients"
+                    android:inputType="text"
+                    android:padding="8dp"/>
 
-                <include layout="@layout/cook_row_list"></include>
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:padding="8dp"/>
 
-                <include layout="@layout/cook_row_list"></include>
             </LinearLayout>
-        </ScrollView>
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/toolbar"
+                        android:padding="8dp"
+                        android:clipToPadding="false"
+                        android:background="@android:color/white"/>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

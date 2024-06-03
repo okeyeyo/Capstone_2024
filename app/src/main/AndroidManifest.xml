@@ -30,16 +30,6 @@
             android:name=".Muscle"
             android:exported="true" />
         <activity
-            android:name=".FindID"
-            android:exported="true"/>
-        <activity
-            android:name=".FindPW"
-            android:exported="true"/>
-        <activity
-            android:name=".Join"
-            android:exported="true"/>
-
-        <activity
             android:name=".Health"
             android:exported="true" />
         <activity
