@@ -84,7 +84,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="키        :"
+                        android:text="이름        :"
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <TextView
@@ -106,7 +106,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="몸무게 :"
+                        android:text="성별        :"
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <TextView
@@ -127,32 +127,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="성별     :"
+                        android:text="BMI        :"
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <TextView
                         android:id="@+id/MW"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:hint="입력"
-                        android:textSize="20dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="나이     :"
-                        android:textAlignment="center"
-                        android:textSize="20dp"/>
-                    <TextView
-                        android:id="@+id/age"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
