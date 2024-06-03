@@ -1,5 +1,7 @@
+
 plugins {
     alias(libs.plugins.androidApplication)
+
 }
 android {
     namespace = "com.example.capstone_2024"
@@ -47,3 +49,4 @@ dependencies {
 
 
 }
+
