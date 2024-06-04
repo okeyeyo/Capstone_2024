@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    tools:context=".Cook">
+    tools:context=".Cook_Recipe">
 
     <include
         android:id="@+id/toolbar"
@@ -42,7 +42,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/ingredientsEditText"
+                    android:id="@+id/search_recipeEditText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -76,7 +76,6 @@
                         android:padding="8dp"
                         android:clipToPadding="false"
                         android:background="@android:color/white"/>
-
 
                 </LinearLayout>
             </ScrollView>
