@@ -4,6 +4,7 @@ import static android.widget.Toast.makeText;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,13 @@ import android.widget.Toast;import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
+
 public class st_sho extends AppCompatActivity {
     TextView txtResult;
     android.widget.Button[] btn = new Button[6];
     public android.widget.Button buttonShowDialog,back;
+    public TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +52,26 @@ public class st_sho extends AppCompatActivity {
 
             }
         });
+
+        tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status == TextToSpeech.SUCCESS) {
+                    tts.setLanguage(Locale.KOREAN);
+                }
+            }
+        });
+
         btn_popup_set();
 
 
+    }
+    public void onDestroy() {
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
     }
     public void showDialog(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(st_sho.this);
@@ -74,6 +95,7 @@ public class st_sho extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
     }
     public void btn_popup_set(){
 
