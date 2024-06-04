@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openCookActivity() {
-        Intent intent = new Intent(MainActivity.this, Cook.class);
+        Intent intent = new Intent(MainActivity.this, Cook_Recipe.class);
         startActivity(intent);
     }
 

@@ -35,6 +35,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         Food food = foodList.get(position);
         holder.bind(food, listener);
         holder.nameTextView.setText(food.getName());
+        //holder.ingredientsTextView.setText(food.getIngredients());
     }
 
     @Override
@@ -44,14 +45,18 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
     public static class FoodViewHolder extends RecyclerView.ViewHolder {
         private TextView nameTextView;
+        //private TextView ingredientsTextView;
 
         public FoodViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextView);
+            //ingredientsTextView = itemView.findViewById(R.id.ingredientsTextView);
         }
 
         public void bind(final Food food, final OnItemClickListener listener) {
             nameTextView.setText(food.getName());
+            //ingredientsTextView.setText(food.getIngredients());
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

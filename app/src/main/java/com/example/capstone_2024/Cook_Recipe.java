@@ -20,10 +20,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Cook extends AppCompatActivity {
+public class Cook_Recipe extends AppCompatActivity {
 
     Button homebtn;
-    private EditText ingredientsEditText;
+    private EditText search_recipeEditText;
     FoodAdapter foodAdapter;
     private final List<Food> foodList = new ArrayList<>();
     private static final String apiKey = "https://openapi.foodsafetykorea.go.kr/api/221de0c2525840539c5c/COOKRCP01/json/";
@@ -32,11 +32,11 @@ public class Cook extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cook);
+        setContentView(R.layout.cook_recipe);
 
         homebtn = findViewById(R.id.home);
         Button searchButton = findViewById(R.id.searchButton);
-        ingredientsEditText = findViewById(R.id.ingredientsEditText);
+        search_recipeEditText = findViewById(R.id.search_recipeEditText);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -46,8 +46,12 @@ public class Cook extends AppCompatActivity {
             public void onItemClick(Food food) {
                 // 클릭된 음식의 정보를 사용하여 원하는 작업을 수행
                 // 예: 새로운 화면으로 이동하여 음식의 상세 정보 표시
-                Intent intent = new Intent(Cook.this, FoodDetailActivity.class);
+                Intent intent = new Intent(Cook_Recipe.this, FoodDetailActivity.class);
                 intent.putExtra("foodId", food.getId());
+                intent.putExtra("foodName", food.getName());
+                intent.putExtra("ingredients", food.getIngredients());
+                intent.putExtra("manual1", food.getManual1());
+                intent.putExtra("manual_img1", food.getManual_img1());
                 startActivity(intent);
             }
         });
@@ -73,7 +77,7 @@ public class Cook extends AppCompatActivity {
     }
 
     public void openHomeActivity() {
-        Intent intent = new Intent(Cook.this, MainActivity.class);
+        Intent intent = new Intent(Cook_Recipe.this, MainActivity.class);
         startActivity(intent);
     }
 
@@ -90,21 +94,21 @@ public class Cook extends AppCompatActivity {
                     foodAdapter.notifyDataSetChanged();
                     Log.d(TAG, "fetchAllFoods: Success - Foods loaded");
                 } else {
-                    Toast.makeText(Cook.this, "No foods found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Cook_Recipe.this, "No foods found", Toast.LENGTH_SHORT).show();
                     Log.d(TAG, "fetchAllFoods: Failed to get response");
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<FoodResponse> call, @NonNull Throwable t) {
-                Toast.makeText(Cook.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(Cook_Recipe.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
                 Log.e("Cook", "API call failed", t);  // Log the error
             }
         });
     }
 
     private void nameFoods() { //이름
-        String name = ingredientsEditText.getText().toString().trim(); // 사용자가 입력한 음식 이름
+        String name = search_recipeEditText.getText().toString().trim(); // 사용자가 입력한 음식 이름
         if (!name.isEmpty()) { // null 값이 아니면
             FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
             // api 호출해서 음식 목록을 가져오기. FoodApiService에 사용자가 입력한 음식의 이름과 api 키를 전달
@@ -119,13 +123,13 @@ public class Cook extends AppCompatActivity {
                         foodAdapter.notifyDataSetChanged();
                         Log.d(TAG, "search: Success - Foods loaded");
                     } else {
-                        Toast.makeText(Cook.this, "No foods found", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Cook_Recipe.this, "No foods found", Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
                 public void onFailure(@NonNull Call<FoodResponse> call, @NonNull Throwable t) {
-                    Toast.makeText(Cook.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(Cook_Recipe.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
                     Log.e("Cook", "API call failed", t);  // Log the error
                 }
             });
