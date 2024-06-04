@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
         profile = findViewById(R.id.profile);
+        ImageView image = (ImageView)findViewById(R.id.cook);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
