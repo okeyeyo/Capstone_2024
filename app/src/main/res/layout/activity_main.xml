@@ -52,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="프로필"
+                    android:textAlignment="center"
                     android:textSize="30dp"/>
 
                 <LinearLayout
@@ -141,21 +142,23 @@
 
                 <ImageButton
                     android:id="@+id/cook"
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="85dp"
-                    android:background="@drawable/pot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cook_imgbtn_back"
                     android:clickable="true" />
 
 
                 <ImageButton
                     android:id="@+id/health"
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
                     android:background="@drawable/pot"
-                    android:layout_marginTop="10dp"
-                    android:clickable="true"/>
+
+                    android:clickable="true" />
 
             </LinearLayout>
         </LinearLayout>
