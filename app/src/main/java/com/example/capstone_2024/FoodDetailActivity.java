@@ -2,6 +2,7 @@ package com.example.capstone_2024;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.squareup.picasso.Picasso;
 
 public class FoodDetailActivity extends AppCompatActivity {
+    private static final String TAG = "FoodDetailActivity";
 
     ImageButton homebtn;
     @Override
@@ -31,7 +33,7 @@ public class FoodDetailActivity extends AppCompatActivity {
         TextView foodNameTextView = findViewById(R.id.foodNameTextView);
         TextView ingredientsTextView = findViewById(R.id.ingredientsTextView);
         TextView manual1TextView = findViewById(R.id.manual1TextView);
-        ImageView manual_img1TextView = findViewById(R.id.manual_img1TextView);
+        ImageView manual_img1View = findViewById(R.id.manual_img1View);
 
         Intent intent = getIntent();
         String foodName = intent.getStringExtra("foodName");
@@ -42,7 +44,9 @@ public class FoodDetailActivity extends AppCompatActivity {
         foodNameTextView.setText(foodName);
         ingredientsTextView.setText(ingredients);
         manual1TextView.setText(manual1);
-        Picasso.get().load(manual_img1).into(manual_img1TextView);
+        Picasso.get().load(manual_img1).into(manual_img1View);
+
+        Log.d(TAG, "Image URL: " + manual_img1);
     }
 
     public void openHomeActivity() {
