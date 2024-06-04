@@ -121,7 +121,7 @@ public class st_knee extends AppCompatActivity {
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("Tknee 4");
+                showDialog("knee 4");
             }
         });
         btn[4].setOnClickListener(new View.OnClickListener() {
