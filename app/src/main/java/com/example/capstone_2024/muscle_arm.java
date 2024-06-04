@@ -41,6 +41,8 @@ public class muscle_arm extends AppCompatActivity {
     }
 
     public void btn_link_set(){
+
+
         btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +57,8 @@ public class muscle_arm extends AppCompatActivity {
                     public void onReady(YouTubePlayer youTubePlayer) {
                         String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
+                        if(youTubePlayer!=null)
+                            youTubePlayer.pause();
                     }
                 });
                 back = findViewById(R.id.back);

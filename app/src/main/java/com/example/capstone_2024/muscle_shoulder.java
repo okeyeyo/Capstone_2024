@@ -90,6 +90,7 @@ public class muscle_shoulder extends AppCompatActivity {
             androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
+
                 setContentView(R.layout.muscle_youtube);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
