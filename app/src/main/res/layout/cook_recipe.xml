@@ -77,7 +77,6 @@
                         android:clipToPadding="false"
                         android:background="@android:color/white"/>
 
-
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
