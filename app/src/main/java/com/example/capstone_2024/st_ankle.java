@@ -13,9 +13,12 @@ import android.widget.Toast;import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class st_ankle extends AppCompatActivity {
+public class st_ankle extends AppCompatActivity {   //발목
     TextView txtResult;
     public android.widget.Button buttonShowDialog,back;
+    android.widget.Button[] btn = new Button[3];
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,20 @@ public class st_ankle extends AppCompatActivity {
         buttonShowDialog = findViewById(R.id.button2);
         back = findViewById(R.id.back);
 
+        int[] buttonIds = {
+                R.id.button2,
+                R.id.button3,
+                R.id.button4,
+                R.id.button5,
+                R.id.button6,
+                R.id.button7,
+                R.id.button8
+        };
+
+        for (int i = 0; i < btn.length; i++) {
+            btn[i] = findViewById(buttonIds[i]);
+        }
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,17 +50,11 @@ public class st_ankle extends AppCompatActivity {
 
             }
         });
-        buttonShowDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                showDialog();
-            }
-        });
+       btn_popup_set();
 
 
     }
-    private void showDialog() {
+    public void showDialog(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(st_ankle.this);
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.st_popup, null);
@@ -55,6 +66,9 @@ public class st_ankle extends AppCompatActivity {
         // 다이얼로그 크기 조정
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
+        TextView dialogText = dialogView.findViewById(R.id.text);
+        dialogText.setText(message);
+
         Button buttonOk = dialogView.findViewById(R.id.button_ok);
         buttonOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,5 +76,29 @@ public class st_ankle extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+    }
+    public void btn_popup_set(){
+
+        btn[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("발목 1");
+            }
+        });
+        btn[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("발목 2");
+            }
+        });
+        btn[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("발목 3");
+            }
+        });
+
+
+
     }
 }

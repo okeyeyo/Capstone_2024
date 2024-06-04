@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class st_neck extends AppCompatActivity {
     TextView txtResult;
     public android.widget.Button buttonShowDialog,back;
+    android.widget.Button[] btn = new Button[6];
+    public TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,20 @@ public class st_neck extends AppCompatActivity {
         buttonShowDialog = findViewById(R.id.button2);
         back = findViewById(R.id.back);
 
+        int[] buttonIds = {
+                R.id.button2,
+                R.id.button3,
+                R.id.button4,
+                R.id.button5,
+                R.id.button6,
+                R.id.button7,
+                R.id.button8
+        };
+
+        for (int i = 0; i < btn.length; i++) {
+            btn[i] = findViewById(buttonIds[i]);
+        }
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,17 +49,12 @@ public class st_neck extends AppCompatActivity {
 
             }
         });
-        buttonShowDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                showDialog();
-            }
-        });
+        btn_popup_set();
 
 
     }
-    private void showDialog() {
+    /*
+    public void showDialog2() {
         AlertDialog.Builder builder = new AlertDialog.Builder(st_neck.this);
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.st_popup, null);
@@ -62,5 +73,70 @@ public class st_neck extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+    }
+    */
+    public void showDialog(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(st_neck.this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.st_popup, null);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        // 다이얼로그 크기 조정
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        TextView dialogText = dialogView.findViewById(R.id.text);
+        dialogText.setText(message);
+
+        Button buttonOk = dialogView.findViewById(R.id.button_ok);
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+    public void btn_popup_set(){
+
+        btn[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("Text for Button 1");
+            }
+        });
+        btn[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("Text for Button 2");
+            }
+        });
+        btn[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("Text for Button 3");
+            }
+        });
+        btn[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("Text for Button 4");
+            }
+        });
+        btn[4].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("Text for Button 5");
+            }
+        });
+        btn[5].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog("Text for Button 6");
+            }
+        });
+
+
     }
 }
