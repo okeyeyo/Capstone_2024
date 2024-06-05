@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +35,7 @@ public class Cook_Recipe extends AppCompatActivity {
     private final List<Food> foodList = new ArrayList<>();
     private static final String apiKey = "https://openapi.foodsafetykorea.go.kr/api/221de0c2525840539c5c/COOKRCP01/json/";
     private static final String TAG = "Cook";
+    private List<Boolean> bookmarkStatusList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +52,7 @@ public class Cook_Recipe extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        foodAdapter = new FoodAdapter(foodList, new FoodAdapter.OnItemClickListener() {
+        foodAdapter = new FoodAdapter(foodList,bookmarkStatusList,this,new FoodAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food food) {
                 // 클릭된 음식의 정보를 사용하여 원하는 작업을 수행
@@ -147,6 +150,10 @@ public class Cook_Recipe extends AppCompatActivity {
                 public void onResponse(@NonNull Call<FoodResponse> call, @NonNull Response<FoodResponse> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         List<Food> foods = response.body().getCookRcp().getFoods();
+                        for (Food food : foods) {
+                            boolean isBookmarked = loadBookmarkStatus(food.getId());
+                            food.setBookmarked(isBookmarked);
+                        }
                         foodList.clear();
                         foodList.addAll(foods);
                         foodAdapter.notifyDataSetChanged();
@@ -178,6 +185,10 @@ public class Cook_Recipe extends AppCompatActivity {
     public void openFavoritesActivity() {
         Intent intent = new Intent(this, Cook_Favorites.class);
         startActivity(intent);
+    }
+    private boolean loadBookmarkStatus(int foodId) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return preferences.getBoolean("bookmark_" + foodId, false); // 기본값은 false
     }
 
 }

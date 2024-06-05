@@ -31,6 +31,7 @@ public class Find_recipe extends AppCompatActivity  {
     private final List<Food> foodList = new ArrayList<>();
     private static final String apiKey = "https://openapi.foodsafetykorea.go.kr/api/221de0c2525840539c5c/COOKRCP01/json/";
     private static final String TAG = "Find_recipe";
+    private List<Boolean> bookmarkStatusList = new ArrayList<>();
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class Find_recipe extends AppCompatActivity  {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        foodAdapter = new FoodAdapter(foodList, new FoodAdapter.OnItemClickListener() {
+        foodAdapter = new FoodAdapter(foodList, bookmarkStatusList,this,new FoodAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food food) {
                 // 클릭된 음식의 정보를 사용하여 원하는 작업을 수행

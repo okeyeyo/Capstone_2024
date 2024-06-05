@@ -12,6 +12,7 @@ import java.util.List;
 public class Food implements Parcelable { //음식 생성자
 
     private int id;
+    private boolean isBookmarked;
 
     @SerializedName("RCP_NM")
     private String name;
@@ -86,6 +87,7 @@ public class Food implements Parcelable { //음식 생성자
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
+        this.isBookmarked = false;
         this.manual1 = manual1;
         this.manual2 = manual2;
         // Initialize other manual attributes as needed
@@ -306,5 +308,13 @@ public class Food implements Parcelable { //음식 생성자
         dest.writeString(manual20);
 
     }
+
+    public void setBookmarked(boolean isBookmarked) {
+        this.isBookmarked = isBookmarked;
+    }
+    public boolean isBookmarked() {
+        return isBookmarked;
+    }
+
 }
 
