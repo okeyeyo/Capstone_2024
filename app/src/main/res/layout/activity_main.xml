@@ -65,7 +65,7 @@
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <TextView
-                        android:id="@+id/cm"
+                        android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -87,7 +87,7 @@
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <TextView
-                        android:id="@+id/kg"
+                        android:id="@+id/sex"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -108,7 +108,7 @@
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <TextView
-                        android:id="@+id/MW"
+                        android:id="@+id/bmi"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
