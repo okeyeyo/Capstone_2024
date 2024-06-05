@@ -10,8 +10,10 @@ constraintlayout = "2.1.4"
 horizontalcalendar = "1.2.2"
 okhttp = "5.0.0-alpha.12"
 core = "12.1.0"
+retrofit = "2.9.0"
 
 [libraries]
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -22,7 +24,8 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 horizontalcalendar = { group = "io.github.b-sahana", name = "horizontalcalendar", version.ref = "horizontalcalendar" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 core = { group = "com.pierfrancescosoffritti.androidyoutubeplayer", name = "core", version.ref = "core" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
-
