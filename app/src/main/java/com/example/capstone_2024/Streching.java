@@ -18,41 +18,169 @@ import org.jetbrains.annotations.NotNull;
 
 public class Streching extends AppCompatActivity {
 
-    private LinearLayout streching_list_neck1;
-    Button backbtn;
+
+    android.widget.Button[] btn = new Button[7];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.streching);
 
-        backbtn = findViewById(R.id.back);
-        backbtn.setOnClickListener(new View.OnClickListener() {
+
+        Muscle.clickrebtn(this);
+        int[] buttonIds = {
+                R.id.button2,
+                R.id.button3,
+                R.id.button4,
+                R.id.button5,
+                R.id.button6,
+                R.id.button7,
+                R.id.button8
+        };
+
+        for (int i = 0; i < btn.length; i++) {
+            btn[i] = findViewById(buttonIds[i]);
+        }
+
+        btn_link_set();
+    }
+
+
+    public void btn_link_set(){
+
+        btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeActivity();
+                androidx.appcompat.widget.AppCompatButton back;
+              //  setContentView(R.layout.streching_list_neck);
+
+                Intent intent = new Intent(getApplicationContext(), st_neck.class);
+                startActivity(intent);
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Streching.class);
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
-        //treching_list_neck1 = findViewById(R.id.str_neck1_player);
-        /*   LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.bottomMargin = 30;
-        YouTubePlayerView ypv = new YouTubePlayerView(Streching.this);
-        ypv.setLayoutParams(params);
-        streching_list_neck1.addView(ypv);
-        ypv.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+        btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onReady(@NotNull YouTubePlayer youTubePlayer) {
-                youTubePlayer.loadVideo("mUnSpfItRf0", 0);
+            public void onClick(View v) {
+                androidx.appcompat.widget.AppCompatButton back;
+               // setContentView(R.layout.streching_list_shoulder);
+                Intent intent = new Intent(getApplicationContext(), st_sho.class);
+
+                startActivity(intent);
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Streching.class);
+                        startActivity(intent);
+                    }
+                });
             }
         });
-    */
+        btn[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                androidx.appcompat.widget.AppCompatButton back;
+               // setContentView(R.layout.streching_list_back);
+                Intent intent = new Intent(getApplicationContext(), st_back.class);
 
-    }
-    public void openHomeActivity() {
-        Intent intent = new Intent(Streching.this, Health.class);
-        startActivity(intent);
+                startActivity(intent);
+
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Streching.class);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
+        btn[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                androidx.appcompat.widget.AppCompatButton back;
+                //setContentView(R.layout.streching_list_wrist);
+
+                Intent intent = new Intent(getApplicationContext(), st_wrist.class);
+                startActivity(intent);
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Streching.class);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
+        btn[4].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                androidx.appcompat.widget.AppCompatButton back;
+                //setContentView(R.layout.streching_list_ankle);
+                Intent intent = new Intent(getApplicationContext(), st_ankle.class);
+                back = findViewById(R.id.back);
+                startActivity(intent);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Streching.class);
+                        startActivity(intent);
+
+
+                    }
+                });
+            }
+        });
+        btn[5].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                androidx.appcompat.widget.AppCompatButton back;
+               // setContentView(R.layout.streching_list_waish);
+                Intent intent = new Intent(getApplicationContext(), st_waish.class);
+                startActivity(intent);
+
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Streching.class);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
+        btn[6].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                androidx.appcompat.widget.AppCompatButton back;
+               // setContentView(R.layout.streching_list_knee);
+
+                Intent intent = new Intent(getApplicationContext(), st_knee.class);
+                startActivity(intent);
+
+
+
+                back = findViewById(R.id.back);
+                back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Streching.class);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
     }
 
 }
