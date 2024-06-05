@@ -150,6 +150,9 @@ public class Find_recipe extends AppCompatActivity  {
                     Log.e("Cook", "API call failed", t);  // Log the error
                 }
             });
+        }else {
+            Log.d(TAG, "searchFoods: No ingredients provided");
+            Toast.makeText(Find_recipe.this, "No ingredients provided", Toast.LENGTH_SHORT).show();
         }
     }
 

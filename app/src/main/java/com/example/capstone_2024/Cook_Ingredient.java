@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,7 +20,7 @@ import java.util.Locale;
 
 public class Cook_Ingredient extends AppCompatActivity {
 
-    Button homebtn;
+    ImageButton homebtn;
     Button ingredientbtn;
     Button recipebtn;
     Button favoritesbtn;
@@ -90,12 +91,13 @@ public class Cook_Ingredient extends AppCompatActivity {
         find_recipebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFind_recipeActivity();
+                openFindRecipeActivity(ingredientlist);
             }
         });
     }
-    private void openFind_recipeActivity(){
-        Intent intent = new Intent(this, Find_recipe.class);
+    private void openFindRecipeActivity(List<Ingredient> ingredientlist) {
+        Intent intent = new Intent(Cook_Ingredient.this, Find_recipe.class);
+        intent.putExtra("ingredient_list", new ArrayList<>(ingredientlist));
         startActivity(intent);
     }
 
