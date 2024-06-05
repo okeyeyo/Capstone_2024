@@ -54,3 +54,4 @@ public class FoodDetailActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+

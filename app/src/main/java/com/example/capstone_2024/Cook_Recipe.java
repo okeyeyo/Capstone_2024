@@ -24,6 +24,10 @@ import retrofit2.Response;
 public class Cook_Recipe extends AppCompatActivity {
 
     ImageButton homebtn;
+    Button ingredientbtn;
+    Button recipebtn;
+    Button favoritesbtn;
+
     private EditText search_recipeEditText;
     FoodAdapter foodAdapter;
     private final List<Food> foodList = new ArrayList<>();
@@ -36,6 +40,9 @@ public class Cook_Recipe extends AppCompatActivity {
         setContentView(R.layout.cook_recipe);
 
         homebtn = findViewById(R.id.home);
+        ingredientbtn = findViewById(R.id.ingredient);
+        recipebtn = findViewById(R.id.recipe);
+        favoritesbtn = findViewById(R.id.favorites);
         Button searchButton = findViewById(R.id.searchButton);
         search_recipeEditText = findViewById(R.id.search_recipeEditText);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
@@ -63,8 +70,7 @@ public class Cook_Recipe extends AppCompatActivity {
         fetchAllFoods();
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //searchFoods();
+            public void onClick(View v) {;
                 nameFoods();
             }
         });
@@ -75,7 +81,32 @@ public class Cook_Recipe extends AppCompatActivity {
                 openHomeActivity();
             }
         });
+
+        ingredientbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openIngredientActivity();
+            }
+        });
+
+        recipebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRecipeActivity();
+            }
+        });
+
+        favoritesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFavoritesActivity();
+            }
+        });
     }
+
+
+
+
 
     public void openHomeActivity() {
         Intent intent = new Intent(Cook_Recipe.this, MainActivity.class);
@@ -139,4 +170,22 @@ public class Cook_Recipe extends AppCompatActivity {
             fetchAllFoods();
         }
     }
+
+
+
+    public void openIngredientActivity() {
+        Intent intent = new Intent(this, Cook_Ingredient.class);
+        startActivity(intent);
+    }
+    public void openRecipeActivity() {
+        Intent intent = new Intent(this, Cook_Recipe.class);
+        startActivity(intent);
+    }
+    public void openFavoritesActivity() {
+        Intent intent = new Intent(this, Cook_Favorites.class);
+        startActivity(intent);
+    }
+
 }
+
+

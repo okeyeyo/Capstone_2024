@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,10 +21,12 @@ import java.util.Locale;
 
 public class Cook_Ingredient extends AppCompatActivity {
 
-    Button homebtn;
+
+    ImageButton homebtn;
     Button ingredientbtn;
     Button recipebtn;
     Button favoritesbtn;
+    Button find_recipebtn;
     private IngredientAdapter ingredientAdapter;
     private List<Ingredient> ingredientlist;
 
@@ -35,6 +39,7 @@ public class Cook_Ingredient extends AppCompatActivity {
         ingredientbtn = findViewById(R.id.ingredient);
         recipebtn = findViewById(R.id.recipe);
         favoritesbtn = findViewById(R.id.favorites);
+        find_recipebtn = findViewById(R.id.find_recipe);
 
         ingredientlist = new ArrayList<>();
         RecyclerView ingredientRecy = findViewById(R.id.ingredientRecy);
@@ -85,6 +90,17 @@ public class Cook_Ingredient extends AppCompatActivity {
                 openFavoritesActivity();
             }
         });
+        find_recipebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFindRecipeActivity(ingredientlist);
+            }
+        });
+    }
+    private void openFindRecipeActivity(List<Ingredient> ingredientlist) {
+        Intent intent = new Intent(Cook_Ingredient.this, Find_recipe.class);
+        intent.putExtra("ingredient_list", new ArrayList<>(ingredientlist));
+        startActivity(intent);
     }
 
     private String getCurrentDate() {

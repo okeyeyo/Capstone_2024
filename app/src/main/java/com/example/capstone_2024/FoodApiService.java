@@ -20,3 +20,4 @@ public interface FoodApiService {
     @GET("1/100")
     Call<FoodResponse> getAllFoods(@Query("api_key") String apiKey);
 }
+

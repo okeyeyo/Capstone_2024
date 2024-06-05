@@ -65,3 +65,4 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.Vi
         notifyItemRangeChanged(position, ingredientList.size());
     }
 }
+
