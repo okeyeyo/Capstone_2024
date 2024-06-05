@@ -68,7 +68,7 @@
                 android:inputType="text"
                 android:textSize="10pt"
                 android:layout_gravity="center"/>
-            <!--                android:background="@drawable/edittext_border"/>-->
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -140,7 +140,6 @@
                 android:inputType="text"
                 android:textSize="10pt"
                 android:layout_gravity="center"/>
-            <!--                android:background="@drawable/edittext_border"/>-->
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -169,7 +168,6 @@
                 android:inputType="text"
                 android:textSize="10pt"
                 android:layout_gravity="center"/>
-            <!--                android:background="@drawable/edittext_border"/>-->
         </LinearLayout>
 
     </LinearLayout>
@@ -178,15 +176,16 @@
         android:layout_height="500dp"
         android:layout_weight="1"
         android:gravity="center|bottom">
+
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
-            android:text="저장"
-            android:textStyle="bold"
-            android:textSize="10pt"
+            android:background="@drawable/buttonshape"
             android:clickable="true"
-            android:background="@drawable/buttonshape" />
+            android:text="저장"
+            android:textSize="10pt"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
