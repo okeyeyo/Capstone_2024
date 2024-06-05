@@ -6,11 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,7 +24,10 @@ import retrofit2.Response;
 
 public class Cook_Recipe extends AppCompatActivity {
 
-    Button homebtn;
+    ImageButton homebtn;
+    Button ingredientbtn;
+    Button recipebtn;
+    Button favoritesbtn;
     private EditText search_recipeEditText;
     FoodAdapter foodAdapter;
     private final List<Food> foodList = new ArrayList<>();
@@ -35,6 +40,9 @@ public class Cook_Recipe extends AppCompatActivity {
         setContentView(R.layout.cook_recipe);
 
         homebtn = findViewById(R.id.home);
+        ingredientbtn = findViewById(R.id.ingredient);
+        recipebtn = findViewById(R.id.recipe);
+        favoritesbtn = findViewById(R.id.favorites);
         Button searchButton = findViewById(R.id.searchButton);
         search_recipeEditText = findViewById(R.id.search_recipeEditText);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
@@ -62,8 +70,7 @@ public class Cook_Recipe extends AppCompatActivity {
         fetchAllFoods();
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //searchFoods();
+            public void onClick(View v) {;
                 nameFoods();
             }
         });
@@ -74,7 +81,29 @@ public class Cook_Recipe extends AppCompatActivity {
                 openHomeActivity();
             }
         });
+
+        ingredientbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openIngredientActivity();
+            }
+        });
+
+        recipebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRecipeActivity();
+            }
+        });
+
+        favoritesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFavoritesActivity();
+            }
+        });
     }
+
 
     public void openHomeActivity() {
         Intent intent = new Intent(Cook_Recipe.this, MainActivity.class);
@@ -138,44 +167,18 @@ public class Cook_Recipe extends AppCompatActivity {
             fetchAllFoods();
         }
     }
-
-   /* private void searchFoods() { //재료
-        String ingredients = ingredientsEditText.getText().toString().trim(); // 사용자가 입력한 재료 받기
-        if (!ingredients.isEmpty()) { // 입력한 재료가 null값이 아니면
-            FoodApiService apiService = RetrofitClient.getClient().create(FoodApiService.class);
-            // api호출해서 음식목록을 가져오기 //FoodApiService에 사용자가 입력한 재료와 api키를 전달
-            Call<Food> call = apiService.searchingredientsFoods(ingredients, apiKey);
-            call.enqueue(new Callback<Food>() {
-                @Override
-                public void onResponse(@NonNull Call<Food> call, @NonNull Response<Food> response) {
-                    if (response.isSuccessful()) {
-                        Food newFood = response.body();
-                        if (newFood != null) {
-                            foodList.add(newFood);
-                            foodAdapter.notifyItemInserted(foodList.size() - 1);
-                            Log.d(TAG, "search: Success - Foods loaded");
-                        } else {
-                            Toast.makeText(Cook.this, "No foods found", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(Cook.this, "Failed to get response", Toast.LENGTH_SHORT).show();
-                        Log.d(TAG, "searchFoods: Failed to get response");
-                    }
-                }
-                @Override
-                public void onFailure(@NonNull Call<Food> call, @NonNull Throwable t) {
-                    Toast.makeText(Cook.this, "API call failed: " + t.getMessage(), Toast.LENGTH_LONG).show();
-                    Log.e("Cook", "API call failed", t);  // Log the error
-                }
-            });
-        } else {
-            // 검색어가 비어있을 때의 동작
-            fetchAllFoods();
-
-        }
-
-    }*/
-
+    public void openIngredientActivity() {
+        Intent intent = new Intent(this, Cook_Ingredient.class);
+        startActivity(intent);
+    }
+    public void openRecipeActivity() {
+        Intent intent = new Intent(this, Cook_Recipe.class);
+        startActivity(intent);
+    }
+    public void openFavoritesActivity() {
+        Intent intent = new Intent(this, Cook_Favorites.class);
+        startActivity(intent);
+    }
 
 }
 

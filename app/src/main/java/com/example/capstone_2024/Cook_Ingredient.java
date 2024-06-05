@@ -23,6 +23,7 @@ public class Cook_Ingredient extends AppCompatActivity {
     Button ingredientbtn;
     Button recipebtn;
     Button favoritesbtn;
+    Button find_recipebtn;
     private IngredientAdapter ingredientAdapter;
     private List<Ingredient> ingredientlist;
 
@@ -35,6 +36,7 @@ public class Cook_Ingredient extends AppCompatActivity {
         ingredientbtn = findViewById(R.id.ingredient);
         recipebtn = findViewById(R.id.recipe);
         favoritesbtn = findViewById(R.id.favorites);
+        find_recipebtn = findViewById(R.id.find_recipe);
 
         ingredientlist = new ArrayList<>();
         RecyclerView ingredientRecy = findViewById(R.id.ingredientRecy);
@@ -85,6 +87,16 @@ public class Cook_Ingredient extends AppCompatActivity {
                 openFavoritesActivity();
             }
         });
+        find_recipebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFind_recipeActivity();
+            }
+        });
+    }
+    private void openFind_recipeActivity(){
+        Intent intent = new Intent(this, Find_recipe.class);
+        startActivity(intent);
     }
 
     private String getCurrentDate() {
