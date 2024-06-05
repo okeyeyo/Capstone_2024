@@ -39,7 +39,32 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/shoul_mil_press"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            android:text=" 1. 팔꿈치와 바벨이 수직선상에 위치하도록 어깨까지 끌어올리고 팔꿈치를 앞으로 보내어 자세를 고정한다.\n 2. 그 상태에서 정수리 방향으로 정수리 위까지 들어올린다.\n 3.이때 턱과 코가 걸릴 수 있습니다.
+고개를 살짝 비켜주면서 바벨이 수직으로 움직일 수 있도록 동선을 만들어줘야합니다.\n 4. 들었을때 바벨의 최종위치는 정수리 뒤에 위치해야 하고 팔꿈치가 뒤로 빠져서는 안 됩니다." />
+
+        <TextView
+            android:id="@+id/shoul_behind_press"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+    </FrameLayout>
+
 
 </LinearLayout>
+
+
+
 
 
