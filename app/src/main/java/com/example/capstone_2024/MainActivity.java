@@ -12,8 +12,8 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
 
     ImageButton homebtn;
-    Button cookbtn;
-    Button healthbtn;
+    ImageButton cookbtn;
+   ImageButton healthbtn;
     LinearLayout profile;
 
     @Override

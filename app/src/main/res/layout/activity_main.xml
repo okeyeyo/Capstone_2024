@@ -165,7 +165,10 @@
                     android:id="@+id/cook"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="20dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:layout_weight="20"
                     android:background="@drawable/cook_imgbtn_back"
                     android:clickable="true" />
@@ -174,7 +177,10 @@
                     android:id="@+id/health"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="20dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:layout_weight="20"
                     android:background="@drawable/health_imgbtn_back"
                     android:clickable="true" />
