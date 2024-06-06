@@ -23,98 +23,109 @@
             android:padding="0dp"
             android:src="@drawable/main_logo" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="    스트레칭"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/backbtn"
+            android:clickable="true" />
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="@color/main_color" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:background="@color/white">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            >
-            <ScrollView
-                android:fillViewport="true"
-                android:scrollbars="none"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#87CFD8"
-                        android:text="-스트레칭 목록-"
-                        android:textAlignment="center"
-                        android:textSize="30dp"/>
-
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="목 스트레칭"
+                        android:text="목"
                         android:textSize="25dp"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:background="#00ff0000"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="어깨 스트레칭"
+                        android:text="어깨"
                         android:textSize="25dp"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:background="#00ff0000"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="등 스트레칭"
+                        android:text="등"
                         android:textSize="25dp"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:background="#00ff0000"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="손목 스트레칭"
+                        android:text="손목"
                         android:textSize="25dp"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:background="#00ff0000"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="발목 스트레칭"
+                        android:text="발목"
                         android:textSize="25dp"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:background="#00ff0000"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="허리 스트레칭"
+                        android:text="허리"
                         android:textSize="25dp"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:background="#00ff0000"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="무릎 스트레칭"
+                        android:text="고관절"
                         android:textSize="25dp"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:background="#00ff0000"/>
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/back"
+                        android:id="@+id/button9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="뒤로가기"
-                        android:textSize="20dp"
+                        android:text="무릎"
+                        android:textSize="25dp"
                         android:clickable="true"
-                        android:background="#87CFD8"/>
+                        android:background="#00ff0000"/>
                 </LinearLayout>
-            </ScrollView>
-
-
-        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
