@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Muscle_abs">
+    tools:context=".muscle_abs">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
