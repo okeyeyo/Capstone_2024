@@ -3,31 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/ingredient_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:text="재료명"
             android:textColor="#000"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ingredient_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:text="추가한 날짜"
             android:textColor="#000"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:layout_margin="5dp"
 
             />
     </LinearLayout>
@@ -40,9 +40,11 @@
             android:id="@+id/delate_ingredient"
             android:layout_margin="10dp"
             android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:background="#00D4D4"
-            android:text="재료 빼기"/>
+            android:background="@drawable/yellowbtn"
+            android:text="재료 빼기"
+            android:textSize="6pt"
+            android:textStyle="bold"/>
     </LinearLayout>
 </LinearLayout>
