@@ -25,7 +25,7 @@ public class st_back extends AppCompatActivity {
     public TextToSpeech tts;
 
 
-    public CircleTimerView circleTimerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,15 +47,7 @@ public class st_back extends AppCompatActivity {
         for (int i = 0; i < btn.length; i++) {
             btn[i] = findViewById(buttonIds[i]);
         }
-        start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), CircleTimerView.class);
-                startActivity(intent);
-                circleTimerView.startTimer();
-            }
-        });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
