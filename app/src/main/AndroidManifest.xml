@@ -38,9 +38,6 @@
             android:exported="true" />
         <activity
             android:name=".Profile"
-<<<<<<< HEAD
-            android:exported="true" />
-=======
             android:exported="true"/>
         <activity
             android:name=".muscle_back"
@@ -98,31 +95,9 @@
             android:theme="@android:style/Theme.Dialog"
             android:exported="true"
             />
->>>>>>> 20194525
 
-        <activity
-            android:name=".Muscle_back"
-            android:exported="true"
-            />
-        <activity
-            android:name=".muscle_shoulder"
-            android:exported="true"/>
-        <activity
-            android:name=".Muscle_arm"
-            android:exported="true"
-            />
-        <activity
-            android:name=".muscle_chest"
-            android:exported="true"
-            />
-        <activity
-            android:name=".Muscle_abs"
-            android:exported="true"
-            />
-        <activity
-            android:name=".muscle_leg"
-            android:exported="true"
-            />
+
+
         <activity
             android:name=".Muscle_abs_cable"
             android:exported="true"
