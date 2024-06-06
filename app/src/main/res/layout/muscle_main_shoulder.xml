@@ -7,7 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
+<<<<<<< HEAD
     tools:context=".Muscle_shoulder">
+=======
+    tools:context=".muscle_shoulder">
+
+
+>>>>>>> 20194525
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -186,7 +192,7 @@
                             android:id="@+id/button_4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="덤벨 프레스"
+                            android:text="덤벨 숄더 프레스"
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"/>

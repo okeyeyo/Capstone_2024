@@ -38,21 +38,81 @@
             android:exported="true" />
         <activity
             android:name=".Profile"
+<<<<<<< HEAD
             android:exported="true" />
+=======
+            android:exported="true"/>
+        <activity
+            android:name=".muscle_back"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_shoulder"
+            android:exported="true"/>
+        <activity
+            android:name=".muscle_arm"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_chest"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_abs"
+            android:exported="true"
+            />
+        <activity
+            android:name=".muscle_leg"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_ankle"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_back"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_knee"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_neck"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_sho"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_waish"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_wrist"
+            android:exported="true"
+            />
+        <activity
+            android:name=".st_popup"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="true"
+            />
+>>>>>>> 20194525
 
         <activity
             android:name=".Muscle_back"
             android:exported="true"
             />
         <activity
-            android:name=".Muscle_shoulder"
+            android:name=".muscle_shoulder"
             android:exported="true"/>
         <activity
             android:name=".Muscle_arm"
             android:exported="true"
             />
         <activity
-            android:name=".Muscle_chest"
+            android:name=".muscle_chest"
             android:exported="true"
             />
         <activity
@@ -60,7 +120,7 @@
             android:exported="true"
             />
         <activity
-            android:name=".Muscle_leg"
+            android:name=".muscle_leg"
             android:exported="true"
             />
         <activity
