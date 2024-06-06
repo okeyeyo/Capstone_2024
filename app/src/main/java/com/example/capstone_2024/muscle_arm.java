@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,7 +50,9 @@ public class muscle_arm extends AppCompatActivity {
                 androidx.appcompat.widget.AppCompatButton back;
                 setContentView(R.layout.muscle_youtube);
 
-
+                TextView text;
+                text = findViewById(R.id.arm_1);
+                text.setVisibility(View.VISIBLE);
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -65,6 +68,7 @@ public class muscle_arm extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_arm.class);
                         startActivity(intent);
                     }
@@ -77,7 +81,9 @@ public class muscle_arm extends AppCompatActivity {
                 androidx.appcompat.widget.AppCompatButton back;
                 setContentView(R.layout.muscle_youtube);
 
-
+                TextView text;
+                text = findViewById(R.id.arm_2);
+                text.setVisibility(View.VISIBLE);
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -91,6 +97,7 @@ public class muscle_arm extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_arm.class);
                         startActivity(intent);
                     }
@@ -103,7 +110,9 @@ public class muscle_arm extends AppCompatActivity {
                 androidx.appcompat.widget.AppCompatButton back;
                 setContentView(R.layout.muscle_youtube);
 
-
+                TextView text;
+                text = findViewById(R.id.arm_3);
+                text.setVisibility(View.VISIBLE);
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -117,6 +126,7 @@ public class muscle_arm extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_arm.class);
                         startActivity(intent);
                     }
@@ -128,7 +138,9 @@ public class muscle_arm extends AppCompatActivity {
             public void onClick(View v) {
                 androidx.appcompat.widget.AppCompatButton back;
                 setContentView(R.layout.muscle_youtube);
-
+                TextView text;
+                text = findViewById(R.id.arm_4);
+                text.setVisibility(View.VISIBLE);
 
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
@@ -143,6 +155,7 @@ public class muscle_arm extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_arm.class);
                         startActivity(intent);
                     }
@@ -155,7 +168,9 @@ public class muscle_arm extends AppCompatActivity {
                 androidx.appcompat.widget.AppCompatButton back;
                 setContentView(R.layout.muscle_youtube);
 
-
+                TextView text;
+                text = findViewById(R.id.arm_5);
+                text.setVisibility(View.VISIBLE);
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -169,6 +184,7 @@ public class muscle_arm extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_arm.class);
                         startActivity(intent);
                     }

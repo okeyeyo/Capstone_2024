@@ -6,9 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
+
+import org.w3c.dom.Text;
 
 import java.util.Stack;
 
@@ -16,6 +20,7 @@ import java.util.Stack;
 public class muscle_shoulder extends AppCompatActivity {
     boolean display = true;
     android.widget.Button[] btn = new Button[7];
+
 
     Stack<Integer> layoutStack = new Stack<>();
 
@@ -36,9 +41,19 @@ public class muscle_shoulder extends AppCompatActivity {
                 R.id.button_7,
                 R.id.button_8
         };
+        int[] buttonIds2 = {
+                R.id.shoul_1,
+                R.id.shoul_2,
+                R.id.shoul_3,
+                R.id.shoul_4,
+                R.id.shoul_5,
+                R.id.shoul_6,
+                R.id.shoul_7
+        };
 
         for (int i = 0; i < btn.length; i++) {
             btn[i] = findViewById(buttonIds[i]);
+
         }
 
         btn_link_set();
@@ -57,14 +72,16 @@ public class muscle_shoulder extends AppCompatActivity {
 
         btn[0].setOnClickListener(new View.OnClickListener() {
 
+
             @Override
             public void onClick(View v) {
 
                 androidx.appcompat.widget.AppCompatButton back;
                 setContentView(R.layout.muscle_youtube);
+                TextView text;
+                text = findViewById(R.id.shoul_1);
 
-
-
+                text.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -77,8 +94,11 @@ public class muscle_shoulder extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
                         startActivity(intent);
+
+
                     }
                 });
 
@@ -86,12 +106,17 @@ public class muscle_shoulder extends AppCompatActivity {
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
-
+            TextView text2;
             androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
 
+
+
                 setContentView(R.layout.muscle_youtube);
+                text2 = findViewById(R.id.shoul_2);
+
+                text2.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -101,10 +126,13 @@ public class muscle_shoulder extends AppCompatActivity {
                     }
                 });
 
+
+
                 back = findViewById(R.id.back);
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text2.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
                         startActivity(intent);
                     }
@@ -112,11 +140,16 @@ public class muscle_shoulder extends AppCompatActivity {
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
-
+            TextView text3;
             androidx.appcompat.widget.AppCompatButton back;
             @Override
             public void onClick(View v) {
+
+
                 setContentView(R.layout.muscle_youtube);
+                text3 = findViewById(R.id.shoul_3);
+
+                text3.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -130,6 +163,7 @@ public class muscle_shoulder extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text3.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
                         startActivity(intent);
                     }
@@ -141,6 +175,10 @@ public class muscle_shoulder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
+                TextView text;
+                text = findViewById(R.id.shoul_4);
+
+                text.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -153,6 +191,7 @@ public class muscle_shoulder extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
                         startActivity(intent);
                     }
@@ -164,6 +203,10 @@ public class muscle_shoulder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
+                TextView text;
+                text = findViewById(R.id.shoul_5);
+
+                text.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -176,6 +219,7 @@ public class muscle_shoulder extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
                         startActivity(intent);
                     }
@@ -187,6 +231,10 @@ public class muscle_shoulder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
+                TextView text;
+                text = findViewById(R.id.shoul_6);
+
+                text.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -199,6 +247,7 @@ public class muscle_shoulder extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
                         startActivity(intent);
                     }
@@ -211,6 +260,10 @@ public class muscle_shoulder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.muscle_youtube);
+                TextView text;
+                text = findViewById(R.id.shoul_7);
+
+                text.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -223,6 +276,7 @@ public class muscle_shoulder extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_shoulder.class);
                         startActivity(intent);
                     }
