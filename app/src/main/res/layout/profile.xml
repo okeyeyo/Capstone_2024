@@ -181,7 +181,7 @@
             android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/yellowbtn"
             android:clickable="true"
             android:text="저장"
             android:textSize="10pt"
@@ -195,7 +195,7 @@
             android:textStyle="bold"
             android:textSize="10pt"
             android:clickable="true"
-            android:background="@drawable/buttonshape"/>
+            android:background="@drawable/yellowbtn"/>
 
     </LinearLayout>
 </LinearLayout>

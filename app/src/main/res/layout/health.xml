@@ -96,7 +96,7 @@
                 android:textSize="8pt"
                 android:textStyle="bold"
                 android:text="스트레칭"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/yellowbtn"
                 android:clickable="true"/>
 
             <androidx.appcompat.widget.AppCompatButton
@@ -108,7 +108,7 @@
                 android:textStyle="bold"
                 android:textSize="8pt"
                 android:clickable="true"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/yellowbtn"
                 android:text="근력 운동" />
         </LinearLayout>
     </LinearLayout>
