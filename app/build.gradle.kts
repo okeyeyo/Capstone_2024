@@ -50,7 +50,6 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.core)
-<<<<<<< HEAD
     implementation(libs.okhttp)
     implementation("org.json:json:20210307") // org.json 라이브러리
     implementation(libs.retrofit) //API 불러올때 사용함
@@ -61,10 +60,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0") // Glide
     // 41번 http 통신을 도와주는 라이브러리
     implementation(libs.okhttp)
-=======
 
-
->>>>>>> 20194525
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
