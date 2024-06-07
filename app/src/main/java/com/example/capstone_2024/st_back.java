@@ -106,6 +106,7 @@ public class st_back extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("등 1");
+
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {

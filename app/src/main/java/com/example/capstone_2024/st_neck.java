@@ -126,6 +126,10 @@ public class st_neck extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 1");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다.\n" +
+                        "2. 천천히 머리를 뒤로 젖혀서 천장을 바라봅니다. 이 자세를 10-15초 동안 유지하면서 깊게 호흡합니다.\n" +
+                        "3. 천천히 머리를 앞으로 숙여 턱이 가슴에 닿도록 합니다. 이 자세를 10-15초 동안 유지하면서 깊게 호흡합니다.\n" +
+                        "4. 천천히 머리를 원래 위치로 되돌립니다.");
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
@@ -138,6 +142,7 @@ public class st_neck extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 3");
+
             }
         });
         btn[3].setOnClickListener(new View.OnClickListener() {
