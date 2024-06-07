@@ -16,14 +16,23 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/home"
-            android:scaleType="centerCrop"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            android:padding="0dp"
-            android:src="@drawable/main_logo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/home"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:padding="0dp"
+                android:src="@drawable/main_logo" />
+        </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -68,7 +77,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00D4D4"
             android:orientation="horizontal"
             >
             <androidx.appcompat.widget.AppCompatButton
@@ -78,6 +86,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="재료"
+                android:textStyle="bold"
+                android:textSize="8pt"
+                android:background="@drawable/yellowbtn"
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/recipe"
@@ -86,6 +97,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="레시피"
+                android:textStyle="bold"
+                android:textSize="8pt"
+                android:background="@drawable/yellowbtn"
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/favorites"
@@ -94,6 +108,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="즐겨찾기"
+                android:textStyle="bold"
+                android:textSize="8pt"
+                android:background="@drawable/yellowbtn"
                 />
 
         </LinearLayout>

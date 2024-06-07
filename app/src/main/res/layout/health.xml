@@ -28,90 +28,88 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/white">
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:clickable="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="캘린더(준비중)" />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:clickable="true">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Chronometer
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:format="%s"
+                    android:gravity="center"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/profile"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:text="캘린더(준비중)"
+
+                <ImageButton
+                    android:id="@+id/_button1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_margin="15dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/play_36" />
+
+                <ImageButton
+                    android:id="@+id/_button2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_margin="15dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:src="@drawable/rotate_36"
+                    android:scaleType="fitCenter"
+
                     />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <Chronometer
-                        android:id="@+id/timer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="6"
-                        android:format="%s"
-                        android:gravity="center"
-                        android:textSize="40sp"
-                        android:textStyle="bold" />
-
-
-                    <ImageButton
-                        android:id="@+id/_button1"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginHorizontal="20dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@color/cardview_shadow_end_color"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/play_36" />
-
-                    <ImageButton
-                        android:id="@+id/_button2"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@color/cardview_shadow_end_color"
-                        android:src="@drawable/rotate_36"
-                        android:scaleType="fitCenter"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginHorizontal="20dp"
-                        />
-
-
-                </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="운동 종류"
-                    android:layout_marginTop="10dp"
-                    android:textAlignment="center"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/streching"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="스트레칭"
-                    android:clickable="true"/>
-
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/muscle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="근력 운동"
-                    android:clickable="true"/>
-
-
 
 
             </LinearLayout>
-        </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/streching"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="스트레칭"
+                android:background="@drawable/yellowbtn"
+                android:clickable="true"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/muscle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="8pt"
+                android:clickable="true"
+                android:background="@drawable/yellowbtn"
+                android:text="근력 운동" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

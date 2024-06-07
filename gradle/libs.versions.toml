@@ -12,6 +12,7 @@ okhttp = "5.0.0-alpha.12"
 core = "12.1.0"
 retrofit = "2.9.0"
 
+
 [libraries]
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -27,6 +28,6 @@ core = { group = "com.pierfrancescosoffritti.androidyoutubeplayer", name = "core
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
 
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
-
