@@ -12,6 +12,7 @@ import java.util.List;
 public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.ViewHolder> {
 
     private List<Ingredient> ingredientList;
+    private Cook_Ingredient activity;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView ingredientName;
@@ -26,8 +27,9 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.Vi
         }
     }
 
-    public IngredientAdapter(List<Ingredient> ingredientList) {
+    public IngredientAdapter(List<Ingredient> ingredientList, Cook_Ingredient activity) {
         this.ingredientList = ingredientList;
+        this.activity = activity;
     }
 
     @Override
@@ -62,6 +64,7 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.Vi
     public void removeItem(int position) {
         ingredientList.remove(position);
         notifyItemRemoved(position);
-        notifyItemRangeChanged(position, ingredientList.size());
+        activity.saveIngredientList(); // 액티비티의 메서드 호출
     }
+
 }
