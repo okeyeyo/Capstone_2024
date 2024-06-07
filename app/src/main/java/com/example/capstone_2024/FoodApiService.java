@@ -8,8 +8,8 @@ import retrofit2.http.Query;
 
 public interface FoodApiService {
 
-    @GET("")
-    Call<Food> getFood(@Path("id") int foodId, @Query("apiKey") String apiKey);
+    @GET("1/100/RCP_SEQ={id}")
+    Call<FoodResponse> searchFoodById(@Path("id") String foodId, @Query("apiKey") String apiKey);
 
     @GET("1/100/RCP_NM={name}") //이름으로 호출
     Call<FoodResponse> searchnameFood(@Path(value = "name" , encoded = true)

@@ -188,10 +188,6 @@ public class Cook_Recipe extends AppCompatActivity {
                 public void onResponse(@NonNull Call<FoodResponse> call, @NonNull Response<FoodResponse> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         List<Food> foods = response.body().getCookRcp().getFoods();
-                        for (Food food : foods) {
-                            boolean isBookmarked = loadBookmarkStatus(food.getId());
-                            food.setBookmarked(isBookmarked);
-                        }
                         foodList.clear();
                         foodList.addAll(foods);
                         foodAdapter.notifyDataSetChanged();

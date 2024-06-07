@@ -18,7 +18,7 @@ import java.util.List;
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder> {
     private List<Food> foodList;
     private OnItemClickListener listener;
-    private static List<Boolean> bookmarkStatusList;
+    private BookmarkManager bookmarkManager;
     private Context context;
     private static final String PREF_NAME = "BookmarkPreferences";
 
@@ -29,7 +29,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     public FoodAdapter(List<Food> foodList ,List<Boolean> bookmarkStatusList,Context context,OnItemClickListener listener) {
         this.foodList = foodList;
         this.listener = listener;
-        this.bookmarkStatusList = bookmarkStatusList;
+        this.bookmarkManager = new BookmarkManager(context);
         this.context = context;
     }
 
@@ -39,17 +39,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, parent, false);
         return new FoodViewHolder(view);
     }
-    public static void saveBookmarkStatus(Context context, int foodId, boolean isBookmarked) {
-        SharedPreferences preferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("bookmark_" + foodId, isBookmarked);
-        editor.apply();
-    }
-
-    public static boolean loadBookmarkStatus(Context context, int foodId) {
-        SharedPreferences preferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        return preferences.getBoolean("bookmark_" + foodId, false);
-    }
 
     @Override
     public void onBindViewHolder(@NonNull FoodViewHolder holder, int position) {
@@ -58,25 +47,22 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         holder.nameTextView.setText(food.getName());
         holder.bookmarkButton.setImageResource(food.isBookmarked() ? R.drawable.star : R.drawable.empty_star);
 
-
-        holder.bookmarkButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean isBookmarked = food.isBookmarked();
-                // 토글 형식으로 북마크 상태를 변경합니다.
-                food.setBookmarked(!food.isBookmarked());
-                saveBookmarkStatus(context,food.getId(), !isBookmarked);
-                // UI 업데이트
-                notifyDataSetChanged();
+        holder.bookmarkButton.setOnClickListener(v -> {
+            if (food.isBookmarked()) {
+                bookmarkManager.removeBookmark(food.getId());
+                food.setBookmarked(false); // 북마크 상태 변경
+                holder.bookmarkButton.setImageResource(R.drawable.empty_star);
+            } else {
+                bookmarkManager.addBookmark(food.getId());
+                food.setBookmarked(true); // 북마크 상태 변경
+                holder.bookmarkButton.setImageResource(R.drawable.star);
             }
         });
-
-        if (food.isBookmarked()) {
-            holder.bookmarkButton.setImageResource(R.drawable.star);
-        } else {
-            holder.bookmarkButton.setImageResource(R.drawable.empty_star);
-        }
     }
+
+
+
+
 
     @Override
     public int getItemCount() {

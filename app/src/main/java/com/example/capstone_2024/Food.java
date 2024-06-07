@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Food implements Parcelable { //음식 생성자
 
-    private int id;
+    private String id;
     private boolean isBookmarked;
 
     @SerializedName("RCP_NM")
@@ -121,7 +121,7 @@ public class Food implements Parcelable { //음식 생성자
     @SerializedName("MANUAL_IMG20")
     private String manual_img20;
 
-    public Food(int id, String name, String ingredients, String manual1, String manual2) {
+    public Food(String id, String name, String ingredients, String manual1, String manual2) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
@@ -132,7 +132,7 @@ public class Food implements Parcelable { //음식 생성자
     }
 
     protected Food(Parcel in) {
-        id = in.readInt();
+        id = in.readString();
         name = in.readString();
         ingredients = in.readString();
         manual1 = in.readString();
@@ -170,11 +170,11 @@ public class Food implements Parcelable { //음식 생성자
         }
     };
 
-    public int getId(){
+    public String getId(){
         return id;
     }
 
-    public void setId(int id){
+    public void setId(String id){
         this.id = id;
     }
     public String getName() {
@@ -190,7 +190,6 @@ public class Food implements Parcelable { //음식 생성자
     public void setIngredients(String ingredients){
         this.ingredients = ingredients;
     }
-
     public String getManual1() {
         return manual1;
     }
@@ -360,7 +359,7 @@ public class Food implements Parcelable { //음식 생성자
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(id);
+        dest.writeString(id);
         dest.writeString(name);
         dest.writeString(ingredients);
         dest.writeString(manual1);
