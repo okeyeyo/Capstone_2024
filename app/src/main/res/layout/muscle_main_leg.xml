@@ -140,6 +140,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -157,6 +158,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -175,6 +177,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                           />
 
                     </LinearLayout>
@@ -192,6 +195,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -209,6 +213,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                        />
 
                     </LinearLayout>
@@ -226,6 +231,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>

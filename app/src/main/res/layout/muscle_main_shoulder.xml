@@ -39,10 +39,6 @@
                 android:orientation="horizontal"
                 >
 
-                <!--
-                android:background="#00ff0000"
-                android:background="@drawable/selector"
-                -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/shobtn"
                     android:layout_width="0dp"
@@ -62,7 +58,7 @@
                     android:clickable="true"
                     android:text="등"
                     android:textSize="8pt"
-
+                    android:background="#00ff0000"
                     android:layout_marginTop="7dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -73,7 +69,7 @@
                     android:clickable="true"
                     android:text="가슴"
                     android:textSize="8pt"
-
+                    android:background="#00ff0000"
                     android:layout_marginTop="7dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -84,7 +80,7 @@
                     android:clickable="true"
                     android:text="복근"
                     android:textSize="8pt"
-
+                    android:background="#00ff0000"
                     android:layout_marginTop="7dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -95,7 +91,7 @@
                     android:clickable="true"
                     android:text="팔"
                     android:textSize="8pt"
-
+                    android:background="#00ff0000"
                     android:layout_marginTop="7dp"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/legbtn"
@@ -105,7 +101,7 @@
                     android:text="다리"
                     android:textSize="8pt"
                     android:clickable="true"
-
+                    android:background="#00ff0000"
                     android:layout_marginTop="7dp"/>
 
                 <ImageButton
@@ -140,6 +136,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -157,6 +154,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -175,6 +173,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -192,6 +191,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -207,6 +207,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -223,6 +224,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
@@ -239,6 +241,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
+                            android:background="#00ff0000"
                             />
 
                     </LinearLayout>
