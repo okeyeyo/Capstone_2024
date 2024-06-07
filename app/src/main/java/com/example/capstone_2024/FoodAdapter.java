@@ -18,8 +18,6 @@ import java.util.List;
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder> {
     private List<Food> foodList;
     private OnItemClickListener listener;
-    private BookmarkManager bookmarkManager;
-    private Context context;
     private static final String PREF_NAME = "BookmarkPreferences";
 
     public interface OnItemClickListener {
@@ -29,8 +27,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     public FoodAdapter(List<Food> foodList ,List<Boolean> bookmarkStatusList,Context context,OnItemClickListener listener) {
         this.foodList = foodList;
         this.listener = listener;
-        this.bookmarkManager = new BookmarkManager(context);
-        this.context = context;
     }
 
     @NonNull
