@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -18,8 +19,9 @@ import java.util.Locale;
 
 public class st_ankle extends AppCompatActivity {   //발목
     TextView txtResult;
-    public android.widget.Button buttonShowDialog,back;
-    android.widget.Button[] btn = new Button[3];
+    public android.widget.Button buttonShowDialog;
+    ImageButton back;
+    Button[] btn = new Button[3];
     public TextToSpeech tts;
 
 

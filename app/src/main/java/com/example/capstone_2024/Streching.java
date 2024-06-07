@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
@@ -20,7 +21,7 @@ public class Streching extends AppCompatActivity {
 
 
 
-    android.widget.Button[] btn = new Button[7];
+    Button[] btn = new Button[7];
 
 
     @Override
@@ -53,7 +54,7 @@ public class Streching extends AppCompatActivity {
         btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                androidx.appcompat.widget.AppCompatButton back;
+                ImageButton back;
               //  setContentView(R.layout.streching_list_neck);
 
                 Intent intent = new Intent(getApplicationContext(), st_neck.class);
@@ -73,7 +74,7 @@ public class Streching extends AppCompatActivity {
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                androidx.appcompat.widget.AppCompatButton back;
+                ImageButton back;
                // setContentView(R.layout.streching_list_shoulder);
                 Intent intent = new Intent(getApplicationContext(), st_sho.class);
 
@@ -91,7 +92,7 @@ public class Streching extends AppCompatActivity {
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                androidx.appcompat.widget.AppCompatButton back;
+                ImageButton back;
                // setContentView(R.layout.streching_list_back);
                 Intent intent = new Intent(getApplicationContext(), st_back.class);
 
@@ -110,7 +111,7 @@ public class Streching extends AppCompatActivity {
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                androidx.appcompat.widget.AppCompatButton back;
+                ImageButton back;
                 //setContentView(R.layout.streching_list_wrist);
 
                 Intent intent = new Intent(getApplicationContext(), st_wrist.class);
@@ -128,7 +129,7 @@ public class Streching extends AppCompatActivity {
         btn[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                androidx.appcompat.widget.AppCompatButton back;
+                ImageButton back;
                 //setContentView(R.layout.streching_list_ankle);
                 Intent intent = new Intent(getApplicationContext(), st_ankle.class);
                 back = findViewById(R.id.back);
@@ -147,7 +148,7 @@ public class Streching extends AppCompatActivity {
         btn[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                androidx.appcompat.widget.AppCompatButton back;
+                ImageButton back;
                // setContentView(R.layout.streching_list_waish);
                 Intent intent = new Intent(getApplicationContext(), st_waish.class);
                 startActivity(intent);
@@ -165,7 +166,7 @@ public class Streching extends AppCompatActivity {
         btn[6].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                androidx.appcompat.widget.AppCompatButton back;
+                ImageButton back;
                // setContentView(R.layout.streching_list_knee);
 
                 Intent intent = new Intent(getApplicationContext(), st_knee.class);
