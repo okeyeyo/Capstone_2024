@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -18,9 +19,10 @@ import java.util.Locale;
 
 public class st_wrist extends AppCompatActivity {
     TextView txtResult;
-    public android.widget.Button buttonShowDialog,back;
+    public android.widget.Button buttonShowDialog;
+    ImageButton back;
     public TextToSpeech tts;
-    android.widget.Button[] btn = new Button[5];
+    Button[] btn = new Button[5];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

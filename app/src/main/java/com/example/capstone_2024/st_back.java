@@ -19,8 +19,9 @@ import java.util.Locale;
 
 public class st_back extends AppCompatActivity {
     TextView txtResult;
-    android.widget.Button[] btn = new Button[3];
-    public android.widget.Button buttonShowDialog,back;
+    Button[] btn = new Button[3];
+    public android.widget.Button buttonShowDialog;
+    ImageButton back;
     public ImageButton start;
     public TextToSpeech tts;
 
