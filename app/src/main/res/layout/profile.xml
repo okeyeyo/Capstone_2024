@@ -34,8 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
             android:text="사용자 정보 입력"
             android:textColor="@color/black"
             android:textSize="15pt"
@@ -146,7 +146,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -170,17 +171,48 @@
                 android:layout_gravity="center"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="목표"
+                android:gravity="center"
+                android:textSize="10pt"
+                android:layout_marginEnd="3dp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/user_goal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="목표 몸무게를 입력하세요"
+                android:inputType="text"
+                android:textSize="10pt"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:gravity="center|bottom">
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="157dp"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="20dp"
             android:background="@drawable/yellowbtn"
             android:clickable="true"
             android:text="저장"
@@ -190,7 +222,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="20dp"
             android:text="취소"
             android:textStyle="bold"
             android:textSize="10pt"
