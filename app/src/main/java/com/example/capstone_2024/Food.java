@@ -82,6 +82,44 @@ public class Food implements Parcelable { //음식 생성자
 
     @SerializedName("MANUAL_IMG01")
     private String manual_img1;
+    @SerializedName("MANUAL_IMG02")
+    private String manual_img2;
+    @SerializedName("MANUAL_IMG03")
+    private String manual_img3;
+    @SerializedName("MANUAL_IMG04")
+    private String manual_img4;
+    @SerializedName("MANUAL_IMG05")
+    private String manual_img5;
+    @SerializedName("MANUAL_IMG06")
+    private String manual_img6;
+    @SerializedName("MANUAL_IMG07")
+    private String manual_img7;
+    @SerializedName("MANUAL_IMG08")
+    private String manual_img8;
+    @SerializedName("MANUAL_IMG09")
+    private String manual_img9;
+    @SerializedName("MANUAL_IMG10")
+    private String manual_img10;
+    @SerializedName("MANUAL_IMG11")
+    private String manual_img11;
+    @SerializedName("MANUAL_IMG12")
+    private String manual_img12;
+    @SerializedName("MANUAL_IMG13")
+    private String manual_img13;
+    @SerializedName("MANUAL_IMG14")
+    private String manual_img14;
+    @SerializedName("MANUAL_IMG15")
+    private String manual_img15;
+    @SerializedName("MANUAL_IMG16")
+    private String manual_img16;
+    @SerializedName("MANUAL_IMG17")
+    private String manual_img17;
+    @SerializedName("MANUAL_IMG18")
+    private String manual_img18;
+    @SerializedName("MANUAL_IMG19")
+    private String manual_img19;
+    @SerializedName("MANUAL_IMG20")
+    private String manual_img20;
 
     public Food(int id, String name, String ingredients, String manual1, String manual2) {
         this.id = id;
@@ -275,6 +313,45 @@ public class Food implements Parcelable { //음식 생성자
     }
     public String getManual_img1(){return manual_img1;}
     public void setManual_img1(String manual_img1){ this.manual_img1 = manual_img1; }
+    public String getManual_img2(){return manual_img2;}
+    public void setManual_img2(String manual_img2){ this.manual_img2 = manual_img2; }
+    public String getManual_img3(){return manual_img3;}
+    public void setManual_img3(String manual_img3){ this.manual_img3 = manual_img3; }
+    public String getManual_img4(){return manual_img4;}
+    public void setManual_img4(String manual_img4){ this.manual_img4 = manual_img4; }
+    public String getManual_img5(){return manual_img5;}
+    public void setManual_img5(String manual_img5){ this.manual_img5 = manual_img5; }
+    public String getManual_img6(){return manual_img6;}
+    public void setManual_img6(String manual_img6){ this.manual_img6 = manual_img6; }
+    public String getManual_img7(){return manual_img7;}
+    public void setManual_img7(String manual_img7){ this.manual_img7 = manual_img7; }
+    public String getManual_img8(){return manual_img8;}
+    public void setManual_img8(String manual_img8){ this.manual_img8 = manual_img8; }
+    public String getManual_img9(){return manual_img9;}
+    public void setManual_img9(String manual_img9){ this.manual_img9 = manual_img9; }
+    public String getManual_img10(){return manual_img10;}
+    public void setManual_img10(String manual_img10){ this.manual_img10 = manual_img10; }
+    public String getManual_img11(){return manual_img11;}
+    public void setManual_img11(String manual_img11){ this.manual_img11 = manual_img11; }
+    public String getManual_img12(){return manual_img12;}
+    public void setManual_img12(String manual_img12){ this.manual_img2 = manual_img12; }
+    public String getManual_img13(){return manual_img13;}
+    public void setManual_img13(String manual_img13){ this.manual_img13 = manual_img13; }
+    public String getManual_img14(){return manual_img14;}
+    public void setManual_img14(String manual_img14){ this.manual_img14 = manual_img14; }
+    public String getManual_img15(){return manual_img15;}
+    public void setManual_img15(String manual_img15){ this.manual_img15 = manual_img15; }
+    public String getManual_img16(){return manual_img16;}
+    public void setManual_img16(String manual_img16){ this.manual_img16 = manual_img16; }
+    public String getManual_img17(){return manual_img17;}
+    public void setManual_img17(String manual_img17){ this.manual_img17 = manual_img17; }
+    public String getManual_img18(){return manual_img18;}
+    public void setManual_img18(String manual_img18){ this.manual_img18 = manual_img18; }
+    public String getManual_img19(){return manual_img19;}
+    public void setManual_img19(String manual_img19){ this.manual_img19 = manual_img19; }
+    public String getManual_img20(){return manual_img20;}
+    public void setManual_img20(String manual_img20){ this.manual_img20 = manual_img20; }
+
 
     @Override
     public int describeContents() {
