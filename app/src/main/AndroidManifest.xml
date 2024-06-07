@@ -28,6 +28,9 @@
             android:name=".Cook_Favorites"
             android:exported="true" />
         <activity
+            android:name=".Find_recipe"
+            android:exported="true" />
+        <activity
             android:name=".Streching"
             android:exported="true" />
         <activity
