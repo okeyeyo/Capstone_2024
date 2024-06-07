@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".muscle_abs">
+    tools:context=".muscle_leg">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
 
@@ -157,7 +157,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
 
@@ -175,7 +175,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                          />
 
                     </LinearLayout>
 
@@ -192,7 +192,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
 
@@ -209,7 +209,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                       />
 
                     </LinearLayout>
 
@@ -226,7 +226,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
         </LinearLayout>

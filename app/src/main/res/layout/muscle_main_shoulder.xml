@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".muscle_abs">
+    tools:context=".muscle_shoulder">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,6 +39,10 @@
                 android:orientation="horizontal"
                 >
 
+                <!--
+                android:background="#00ff0000"
+                android:background="@drawable/selector"
+                -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/shobtn"
                     android:layout_width="0dp"
@@ -58,7 +62,7 @@
                     android:clickable="true"
                     android:text="등"
                     android:textSize="8pt"
-                    android:background="#00ff0000"
+
                     android:layout_marginTop="7dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -69,7 +73,7 @@
                     android:clickable="true"
                     android:text="가슴"
                     android:textSize="8pt"
-                    android:background="#00ff0000"
+
                     android:layout_marginTop="7dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -80,7 +84,7 @@
                     android:clickable="true"
                     android:text="복근"
                     android:textSize="8pt"
-                    android:background="#00ff0000"
+
                     android:layout_marginTop="7dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -91,7 +95,7 @@
                     android:clickable="true"
                     android:text="팔"
                     android:textSize="8pt"
-                    android:background="#00ff0000"
+
                     android:layout_marginTop="7dp"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/legbtn"
@@ -101,7 +105,7 @@
                     android:text="다리"
                     android:textSize="8pt"
                     android:clickable="true"
-                    android:background="#00ff0000"
+
                     android:layout_marginTop="7dp"/>
 
                 <ImageButton
@@ -136,7 +140,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
 
@@ -153,7 +157,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
 
@@ -171,7 +175,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
 
@@ -188,7 +192,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -203,7 +207,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
                     <LinearLayout
@@ -219,7 +223,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
                     <LinearLayout
@@ -235,7 +239,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
         </LinearLayout>

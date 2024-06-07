@@ -1,6 +1,7 @@
 package com.example.capstone_2024;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -17,7 +18,8 @@ import java.util.Stack;
 
 public class muscle_shoulder extends AppCompatActivity {
     boolean display = true;
-    android.widget.Button[] btn = new Button[7];
+    //android.widget.Button[] btn = new Button[7];
+    androidx.appcompat.widget.AppCompatButton[] btn = new AppCompatButton[7];
 
 
     Stack<Integer> layoutStack = new Stack<>();
@@ -26,6 +28,7 @@ public class muscle_shoulder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.muscle_main_shoulder);
+
 
         Muscle.listbtnset(this);
         Muscle.clickrebtn(this);

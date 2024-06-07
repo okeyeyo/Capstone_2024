@@ -143,7 +143,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                           />
 
                     </LinearLayout>
 
@@ -160,7 +160,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                            />
 
                     </LinearLayout>
 
@@ -178,7 +178,8 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+
+                            />
 
                     </LinearLayout>
 
@@ -195,7 +196,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                           />
 
                     </LinearLayout>
                     <LinearLayout
@@ -211,7 +212,7 @@
                             android:textSize="20dp"
                             android:clickable="true"
                             android:layout_weight="3"
-                            android:background="@drawable/selector"/>
+                           />
 
                     </LinearLayout>
 
