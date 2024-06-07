@@ -12,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/main_color"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -53,30 +54,25 @@
                 app:iconifiedByDefault="false"
                 app:queryHint="검색어를 입력하시오(레시피)" />
         </LinearLayout>
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <include layout="@layout/recipe_row_list"></include>
-
-                    <include layout="@layout/recipe_row_list"></include>
-
-                    <include layout="@layout/recipe_row_list"></include>
-
-                    <include layout="@layout/recipe_row_list"></include>
-                </LinearLayout>
-            </ScrollView>
-        </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:clipToPadding="false"
+                    android:background="@android:color/white"/>
+            </LinearLayout>
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
