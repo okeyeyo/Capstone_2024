@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 메인 컬러가 적용된 LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@color/main_color">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:scaleType="centerCrop"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:padding="0dp"
+            android:src="@drawable/main_logo" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/foodNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                />
+
+            <TextView
+                android:id="@+id/ingredientsLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="재료"
+                android:layout_marginBottom="8dp"
+                />
+
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                />
+
+            <TextView
+                android:id="@+id/recipeLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="요리 순서"
+                android:layout_marginBottom="8dp"
+                />
+
+            <TextView
+                android:id="@+id/manual1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img1View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img2View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img3View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual4TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img4View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual5TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img5View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual6TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img6View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual7TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img7View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual8TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img8View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual9TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img9View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual10TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img10View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual11TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img11View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual12TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img12View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual13TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img13View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual14TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img14View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual15TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img15View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual16TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img16View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual17TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img17View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual18TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img18View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual19TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img19View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+            <TextView
+                android:id="@+id/manual20TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/manual_img20View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

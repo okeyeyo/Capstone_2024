@@ -104,30 +104,35 @@ public class st_knee extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("knee 1");
+                System.out.println("");
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("knee 2");
+                System.out.println("");
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("knee 3");
+                System.out.println("");
             }
         });
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("knee 4");
+                System.out.println("");
             }
         });
         btn[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("knee 5");
+                System.out.println("");
             }
         });
 

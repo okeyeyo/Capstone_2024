@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.appcompat.widget.AppCompatImageButton;
 
 
 public class Muscle extends AppCompatActivity {
@@ -21,8 +23,7 @@ public class Muscle extends AppCompatActivity {
 
     public static void listbtnset(final Activity activity){
 
-        android.widget.Button backbtn, chestbtn,shobtn, armbtn, legbtn,absbtn,rebtn;
-        rebtn = activity.findViewById(R.id.back);
+        Button backbtn, chestbtn,shobtn, armbtn, legbtn,absbtn;
         backbtn = activity.findViewById(R.id.backbtn);
         chestbtn = activity.findViewById(R.id.chestbtn);
         shobtn = activity.findViewById(R.id.shobtn);
@@ -74,10 +75,14 @@ public class Muscle extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
+
+
     }
 
+
     public static void clickrebtn(Activity activity){
-        android.widget.Button rebtn;
+
+        ImageButton rebtn;
         rebtn = activity.findViewById(R.id.back);
         rebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,5 +91,9 @@ public class Muscle extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
+
+
     }
+
+
 }

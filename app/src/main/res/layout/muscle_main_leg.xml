@@ -11,126 +11,121 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#87CFD8"
+        android:background="@color/main_color"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <ImageButton
             android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:text="건강하조(home)" />
+            android:scaleType="centerCrop"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:padding="0dp"
+            android:src="@drawable/main_logo" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:background="@color/white">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="10"
             >
-            <ScrollView
-                android:fillViewport="true"
-                android:scrollbars="none"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="horizontal"
                 >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#87CFD8"
-                        android:text="-목록-"
-                        android:textAlignment="center"
-                        android:textSize="32dp"/>
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/shobtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="어깨"
+                    android:textSize="8pt"
+                    android:background="#00ff0000"
+                    android:layout_marginTop="7dp"/>
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/backbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="등"
+                    android:textSize="8pt"
+                    android:background="#00ff0000"
+                    android:layout_marginTop="7dp"/>
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/shobtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="어깨"
-                        android:textSize="20dp"
-                        android:clickable="true"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/backbtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="등"
-                        android:textSize="20dp"
-                        android:clickable="true"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/chestbtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="가슴"
-                        android:textSize="20dp"
-                        android:clickable="true"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/absbtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="복근"
-                        android:textSize="20dp"
-                        android:clickable="true"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/armbtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="팔"
-                        android:textSize="20dp"
-                        android:clickable="true"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/legbtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="다리"
-                        android:textSize="20dp"
-                        android:clickable="true"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/back"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="뒤로가기"
-                        android:textSize="20dp"
-                        android:clickable="true"
-                        android:background="#87CFD8"/>
-                </LinearLayout>
-            </ScrollView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/chestbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="가슴"
+                    android:textSize="8pt"
+                    android:background="#00ff0000"
+                    android:layout_marginTop="7dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/absbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="복근"
+                    android:textSize="8pt"
+                    android:background="#00ff0000"
+                    android:layout_marginTop="7dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/armbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="팔"
+                    android:textSize="8pt"
+                    android:background="#00ff0000"
+                    android:layout_marginTop="7dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/legbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="다리"
+                    android:textSize="8pt"
+                    android:clickable="true"
+                    android:background="#00ff0000"
+                    android:layout_marginTop="7dp"/>
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/backbtn"
+                    android:clickable="true" />
+            </LinearLayout>
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
             >
-
-            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/sw_notification_all"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#87CFD8"/>
+                android:layout_height="5px"
+                android:background="@color/main_color" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -144,12 +139,8 @@
                             android:text="스쿼트"
                             android:textSize="20dp"
                             android:clickable="true"
-                            android:layout_weight="3"/>
-                        <CheckBox
-                            android:id="@+id/check_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="3"
+                            />
 
                     </LinearLayout>
 
@@ -165,12 +156,8 @@
                             android:text="런지"
                             android:textSize="20dp"
                             android:clickable="true"
-                            android:layout_weight="3"/>
-                        <CheckBox
-                            android:id="@+id/check_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="3"
+                            />
 
                     </LinearLayout>
 
@@ -187,12 +174,8 @@
                             android:text="핵스쿼트"
                             android:textSize="20dp"
                             android:clickable="true"
-                            android:layout_weight="3"/>
-                        <CheckBox
-                            android:id="@+id/check_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="3"
+                          />
 
                     </LinearLayout>
 
@@ -208,12 +191,8 @@
                             android:text="레그 익스텐션"
                             android:textSize="20dp"
                             android:clickable="true"
-                            android:layout_weight="3"/>
-                        <CheckBox
-                            android:id="@+id/check_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="3"
+                            />
 
                     </LinearLayout>
 
@@ -229,12 +208,8 @@
                             android:text="바벨 스쿼트"
                             android:textSize="20dp"
                             android:clickable="true"
-                            android:layout_weight="3"/>
-                        <CheckBox
-                            android:id="@+id/check_6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="3"
+                       />
 
                     </LinearLayout>
 
@@ -250,29 +225,10 @@
                             android:text="파워 레그 프레스"
                             android:textSize="20dp"
                             android:clickable="true"
-                            android:layout_weight="3"/>
-                        <CheckBox
-                            android:id="@+id/check_7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="3"
+                            />
 
                     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-                </LinearLayout>
-            </ScrollView>
-
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -7,43 +7,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    tools:context=".Cook">
+    tools:context=".Cook_Ingredient">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/main_color"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/home"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:text="건강하조(home)" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:background="@color/main_color"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
-
+            <ImageButton
+                android:id="@+id/home"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:padding="0dp"
+                android:src="@drawable/main_logo" />
         </LinearLayout>
-
-
-
-
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,31 +41,100 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:gravity="center"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/search"
+            <EditText
+                android:id="@+id/search_ingredient"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:focusable="true"
-                android:padding="30dp"
-                app:iconifiedByDefault="false"
-                app:queryHint="재료를 입력하시오" />
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="검색어를 입력하시오(재료)"
+                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_ingredient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="5"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:background="@drawable/yellowbtn"
+                android:text="추가"
+                />
 
         </LinearLayout>
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ingredientRecy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/find_recipe"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@color/main_color"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                android:text="레시피 찾기"
+                />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/main_color"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ingredient"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/whitebtn"
+                android:text="재료"
+                android:textStyle="bold"
+                android:textSize="8pt"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recipe"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="레시피"
+                android:textStyle="bold"
+                android:textSize="8pt"
+                android:background="@drawable/whitebtn"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/favorites"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="즐겨찾기"
+                android:textStyle="bold"
+                android:textSize="8pt"
+                android:background="@drawable/whitebtn"
+                />
 
-            </LinearLayout>
-        </ScrollView>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

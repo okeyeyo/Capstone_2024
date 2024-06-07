@@ -104,18 +104,21 @@ public class st_ankle extends AppCompatActivity {   //발목
             @Override
             public void onClick(View v) {
                 showDialog("발목 1");
+                System.out.println("");
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("발목 2");
+                System.out.println("");
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("발목 3");
+                System.out.println("");
             }
         });
 

@@ -102,30 +102,35 @@ public class st_waish extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("waish  1");
+                System.out.println("");
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("waish  2");
+                System.out.println("");
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("waish 3");
+                System.out.println("");
             }
         });
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("waish  4");
+                System.out.println("");
             }
         });
         btn[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("waish 5");
+                System.out.println("");
             }
         });
 

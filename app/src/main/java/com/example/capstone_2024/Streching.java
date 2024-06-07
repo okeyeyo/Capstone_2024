@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class Streching extends AppCompatActivity {
 
 
+
     android.widget.Button[] btn = new Button[7];
 
 
@@ -67,6 +68,7 @@ public class Streching extends AppCompatActivity {
                 });
             }
         });
+
 
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,6 +183,7 @@ public class Streching extends AppCompatActivity {
                 });
             }
         });
+
     }
 
 }
