@@ -105,35 +105,49 @@ public class st_wrist extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("손목 1");
-                System.out.println("");
+                System.out.println("1. 한 손을 내려놓고 손바닥이 위를 향하도록 합니다.\n" +
+                        "2. 다른 손으로 손목을 잡고 천천히 시계 방향으로 손목을 돌립니다. 이때 팔은 고정되어 있어야 합니다.\n" +
+                        "3. 10-15회 반복한 후, 반대 방향으로 돌려서 스트레칭을 합니다.");
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("손목 2");
-                System.out.println("");
+                System.out.println("1. 한 손을 내려놓고 손바닥이 위를 향하도록 합니다.\n" +
+                        "2. 다른 손으로 손바닥을 잡고 천천히 아래로 당겨줍니다.\n" +
+                        "3. 손바닥을 최대한 아래로 당기고, 팔은 고정되어 있어야 합니다. 손목과 손바닥 근육에 스트레칭을 느낄 수 있을 때까지 유지합니다.\n" +
+                        "4. 15-30초 동안 유지한 후, 천천히 원래 자세로 돌아갑니다.");
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("손목 3");
-                System.out.println("");
+                System.out.println("1. 한 손을 내려놓고 손바닥이 위를 향하도록 합니다.\n" +
+                        "2. 다른 손으로 손바닥을 가볍게 잡고 천천히 아래로 깊게 눌러줍니다.\n" +
+                        "3. 손바닥을 최대한 아래로 누르고, 팔은 고정된 상태여야 합니다. 손목과 손바닥 근육에 스트레칭을 느낄 수 있을 때까지 유지합니다.\n" +
+                        "4. 15-30초 동안 유지한 후, 천천히 원래 자세로 돌아갑니다.");
             }
         });
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("손목 4");
-                System.out.println("");
+                System.out.println("1. 한 손의 손가락을 다른 손으로 잡아 깍지에 끼도록 합니다.\n" +
+                        "2. 다른 손으로 끼고 있는 손가락을 천천히 외쪽으로 늘려줍니다.\n" +
+                        "3. 손가락을 최대한 늘린 상태에서 10-15초 정도 유지합니다.\n" +
+                        "4. 이후 천천히 원래 자세로 돌아갑니다.");
             }
         });
         btn[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("손목 5");
-                System.out.println("");
+                System.out.println("1. 한 손을 다른 손으로 잡아주고 손바닥을 아래로 향하도록 합니다.\n" +
+                        "2. 다른 손으로 손등을 부드럽게 쥐어줍니다. 적당한 압력으로 손바닥 전체에 균등하게 압력을 가해줍니다.\n" +
+                        "3. 손등을 가볍게 쥐어주면서 손목에서부터 손가락 끝까지 이동합니다. 이렇게 하면 모든 부분에 마사지를 균등하게 해줄 수 있습니다.\n" +
+                        "4. 손등 전체에 대해 약 5-10분 동안 마사지를 진행합니다.\n");
             }
         });
 

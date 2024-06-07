@@ -131,7 +131,11 @@ public class st_back extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("등 3");
-                System.out.println("");
+                System.out.println("1. 서서 어깨를 편안하게 펴고 양손을 몸 옆에 내려놓습니다.\n" +
+                        "2. 천천히 어깨를 뒤로 모아봅니다.\n" +
+                        "3. 어깨 뒤쪽에 있는 근육들을 느낄 수 있을 때까지 모으고 최대한 느슨하게 해줍니다. 5-10초 동안 이 자세를 유지합니다.\n" +
+                        "4. 날개뼈를 모은 상태에서 천천히 어깨를 앞으로 내밀어 느슨하게 해줍니다.\n" +
+                        "5. 가볍게 흔들어서 어깨와 등 근육을 완전히 이완시켜줍니다.");
             }
         });
 
