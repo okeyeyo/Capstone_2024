@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -20,13 +21,16 @@ public class st_back extends AppCompatActivity {
     TextView txtResult;
     android.widget.Button[] btn = new Button[3];
     public android.widget.Button buttonShowDialog,back;
+    public ImageButton start;
     public TextToSpeech tts;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.streching_list_back);
-
+        start = findViewById(R.id._button1);
         buttonShowDialog = findViewById(R.id.button2);
         back = findViewById(R.id.back);
 
@@ -120,4 +124,5 @@ public class st_back extends AppCompatActivity {
 
 
     }
+
 }

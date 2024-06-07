@@ -107,6 +107,7 @@
             android:theme="@android:style/Theme.Dialog"
             android:exported="true"
             />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

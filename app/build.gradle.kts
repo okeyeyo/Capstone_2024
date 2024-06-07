@@ -36,12 +36,15 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    /*
     externalNativeBuild {
         cmake {
             path = file("src/main/cpp/CMakeLists.txt")
             version = "3.22.1"
         }
     }
+
+     */
 }
 
 dependencies {
@@ -51,6 +54,7 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.core)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

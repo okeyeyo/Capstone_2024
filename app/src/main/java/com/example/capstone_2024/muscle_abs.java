@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,7 +49,9 @@ public class muscle_abs extends AppCompatActivity {
 
 
                 setContentView(R.layout.muscle_youtube);
-
+                TextView text;
+                text = findViewById(R.id.abs_1);
+                text.setVisibility(View.VISIBLE);
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -64,6 +67,7 @@ public class muscle_abs extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_abs.class);
                         startActivity(intent);
                     }
@@ -80,7 +84,9 @@ public class muscle_abs extends AppCompatActivity {
 
                 setContentView(R.layout.muscle_youtube);
 
-
+                TextView text;
+                text = findViewById(R.id.abs_2);
+                text.setVisibility(View.VISIBLE);
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -95,6 +101,7 @@ public class muscle_abs extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_abs.class);
                         startActivity(intent);
                     }
@@ -109,7 +116,9 @@ public class muscle_abs extends AppCompatActivity {
 
 
                 setContentView(R.layout.muscle_youtube);
-
+                TextView text;
+                text = findViewById(R.id.abs_3);
+                text.setVisibility(View.VISIBLE);
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -125,6 +134,7 @@ public class muscle_abs extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_abs.class);
                         startActivity(intent);
                     }
@@ -139,7 +149,9 @@ public class muscle_abs extends AppCompatActivity {
 
 
                 setContentView(R.layout.muscle_youtube);
-
+                TextView text;
+                text = findViewById(R.id.abs_4);
+                text.setVisibility(View.VISIBLE);
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -155,6 +167,7 @@ public class muscle_abs extends AppCompatActivity {
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        text.setVisibility(View.INVISIBLE);
                         Intent intent = new Intent(getApplicationContext(), muscle_abs.class);
                         startActivity(intent);
                     }
