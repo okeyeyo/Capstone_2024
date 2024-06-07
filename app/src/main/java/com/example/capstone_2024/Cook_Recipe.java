@@ -29,7 +29,6 @@ public class Cook_Recipe extends AppCompatActivity {
     ImageButton homebtn;
     Button ingredientbtn;
     Button recipebtn;
-    Button favoritesbtn;
     private EditText search_recipeEditText;
     FoodAdapter foodAdapter;
     private final List<Food> foodList = new ArrayList<>();
@@ -45,7 +44,6 @@ public class Cook_Recipe extends AppCompatActivity {
         homebtn = findViewById(R.id.home);
         ingredientbtn = findViewById(R.id.ingredient);
         recipebtn = findViewById(R.id.recipe);
-        favoritesbtn = findViewById(R.id.favorites);
         Button searchButton = findViewById(R.id.searchButton);
         search_recipeEditText = findViewById(R.id.search_recipeEditText);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
@@ -136,13 +134,6 @@ public class Cook_Recipe extends AppCompatActivity {
                 openRecipeActivity();
             }
         });
-
-        favoritesbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFavoritesActivity();
-            }
-        });
     }
 
 
@@ -215,14 +206,6 @@ public class Cook_Recipe extends AppCompatActivity {
     public void openRecipeActivity() {
         Intent intent = new Intent(this, Cook_Recipe.class);
         startActivity(intent);
-    }
-    public void openFavoritesActivity() {
-        Intent intent = new Intent(this, Cook_Favorites.class);
-        startActivity(intent);
-    }
-    private boolean loadBookmarkStatus(int foodId) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        return preferences.getBoolean("bookmark_" + foodId, false); // 기본값은 false
     }
 
 }

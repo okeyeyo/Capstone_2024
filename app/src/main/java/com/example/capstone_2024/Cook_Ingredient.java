@@ -29,7 +29,6 @@ public class Cook_Ingredient extends AppCompatActivity {
     ImageButton homebtn;
     Button ingredientbtn;
     Button recipebtn;
-    Button favoritesbtn;
     Button find_recipebtn;
     private IngredientAdapter ingredientAdapter;
     private List<Ingredient> ingredientlist;
@@ -45,7 +44,6 @@ public class Cook_Ingredient extends AppCompatActivity {
         homebtn = findViewById(R.id.home);
         ingredientbtn = findViewById(R.id.ingredient);
         recipebtn = findViewById(R.id.recipe);
-        favoritesbtn = findViewById(R.id.favorites);
         find_recipebtn = findViewById(R.id.find_recipe);
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -54,7 +52,7 @@ public class Cook_Ingredient extends AppCompatActivity {
         RecyclerView ingredientRecy = findViewById(R.id.ingredientRecy);
         ingredientRecy.setLayoutManager(new LinearLayoutManager(this));
 
-        ingredientAdapter = new IngredientAdapter(ingredientlist);
+        ingredientAdapter = new IngredientAdapter(ingredientlist,this);
         ingredientRecy.setAdapter(ingredientAdapter);
 
         EditText searchIngredient = findViewById(R.id.search_ingredient);
@@ -93,13 +91,6 @@ public class Cook_Ingredient extends AppCompatActivity {
                 openRecipeActivity();
             }
         });
-
-        favoritesbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFavoritesActivity();
-            }
-        });
         find_recipebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,7 +108,8 @@ public class Cook_Ingredient extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         return sdf.format(new Date());
     }
-    private void saveIngredientList() {
+
+    void saveIngredientList() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
         String json = gson.toJson(ingredientlist);
@@ -145,10 +137,6 @@ public class Cook_Ingredient extends AppCompatActivity {
     }
     public void openRecipeActivity() {
         Intent intent = new Intent(Cook_Ingredient.this, Cook_Recipe.class);
-        startActivity(intent);
-    }
-    public void openFavoritesActivity() {
-        Intent intent = new Intent(Cook_Ingredient.this, Cook_Favorites.class);
         startActivity(intent);
     }
 }

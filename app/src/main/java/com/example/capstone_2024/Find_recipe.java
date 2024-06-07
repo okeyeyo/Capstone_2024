@@ -25,7 +25,6 @@ public class Find_recipe extends AppCompatActivity  {
     ImageButton homebtn;
     Button ingredientbtn;
     Button recipebtn;
-    Button favoritesbtn;
     FoodAdapter foodAdapter;
     private List<Ingredient> ingredientList;
     private final List<Food> foodList = new ArrayList<>();
@@ -40,7 +39,6 @@ public class Find_recipe extends AppCompatActivity  {
         homebtn = findViewById(R.id.home);
         ingredientbtn = findViewById(R.id.ingredient);
         recipebtn = findViewById(R.id.recipe);
-        favoritesbtn = findViewById(R.id.favorites);
         ingredientList = (List<Ingredient>) getIntent().getSerializableExtra("ingredient_list");
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
@@ -125,12 +123,6 @@ public class Find_recipe extends AppCompatActivity  {
             }
         });
 
-        favoritesbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFavoritesActivity();
-            }
-        });
     }
     public void openHomeActivity() {
         Intent intent = new Intent(this, MainActivity.class);
@@ -142,10 +134,6 @@ public class Find_recipe extends AppCompatActivity  {
     }
     public void openRecipeActivity() {
         Intent intent = new Intent(this, Cook_Recipe.class);
-        startActivity(intent);
-    }
-    public void openFavoritesActivity() {
-        Intent intent = new Intent(this, Cook_Favorites.class);
         startActivity(intent);
     }
 
