@@ -116,6 +116,7 @@
                     android:layout_below="@id/btnAttendance"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="16dp"
+                    android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:text="출석일수: 0일"
                     android:textSize="18sp" />
@@ -127,6 +128,7 @@
                     android:layout_below="@id/calendarView"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
                     android:text="출석하기"
                     android:textColor="@color/black"
                     android:backgroundTint="@color/main_color"/>
