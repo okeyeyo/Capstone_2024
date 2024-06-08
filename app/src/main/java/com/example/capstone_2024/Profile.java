@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +21,7 @@ public class Profile extends AppCompatActivity {
     private EditText user_name, user_cm, user_kg;
     private RadioGroup gender;
     private RadioButton user_male, user_female;
-    private Button savebtn, canclebtn;
+    private Button savebtn, cancelbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class Profile extends AppCompatActivity {
         user_male = findViewById(R.id.user_male);
         user_female = findViewById(R.id.user_female);
         savebtn = findViewById(R.id.user_save);
-        canclebtn = findViewById(R.id.user_cancle);
+        cancelbtn = findViewById(R.id.user_cancel);
 
 
         homebtn.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +53,7 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-        canclebtn.setOnClickListener(new View.OnClickListener() {
+        cancelbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -70,13 +71,15 @@ public class Profile extends AppCompatActivity {
         String height = user_cm.getText().toString();
         String weight = user_kg.getText().toString();
 
-        SharedPreferences sharedPreferences = getSharedPreferences("UserDara", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("이름", name);
-        editor.putString("성별", gender);
-        editor.putString("키", height);
-        editor.putString("몸무게", weight);
+        editor.putString("name", name);
+        editor.putString("gender", gender);
+        editor.putString("height", height);
+        editor.putString("weight", weight);
         editor.apply();
+
+        Log.d("Profile", "Save Date: Name = " + name + ", Gender = " + gender + ", Height = " + height + ", Weight = " + weight);
 
         Intent intent = new Intent(Profile.this, MainActivity.class);
         startActivity(intent);
