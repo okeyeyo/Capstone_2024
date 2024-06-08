@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="40dp"
             android:text="사용자 정보 입력"
             android:textColor="@color/black"
             android:textSize="15pt"
@@ -88,7 +88,7 @@
                 android:textStyle="bold"/>
 
             <RadioGroup
-                android:id="@+id/radio_group"
+                android:id="@+id/user_gender"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -97,6 +97,7 @@
 
                 >
                 <RadioButton
+                    android:id="@+id/user_male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -104,6 +105,7 @@
                     android:textSize="10pt"
                     />
                 <RadioButton
+                    android:id="@+id/user_female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -171,37 +173,6 @@
                 android:layout_gravity="center"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:text="목표"
-                android:gravity="center"
-                android:textSize="10pt"
-                android:layout_marginEnd="3dp"
-                android:textStyle="bold"
-                />
-
-            <EditText
-                android:id="@+id/user_goal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:hint="목표 몸무게를 입력하세요"
-                android:inputType="text"
-                android:textSize="10pt"
-                android:layout_gravity="center"/>
-
-
-        </LinearLayout>
-
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -210,6 +181,7 @@
         android:gravity="center|bottom">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/user_save"
             android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -220,6 +192,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/user_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"

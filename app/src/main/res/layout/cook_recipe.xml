@@ -41,17 +41,18 @@
 
             <EditText
                 android:id="@+id/search_recipeEditText"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="재료를 입력하세요"
+                android:layout_weight="3"
+                android:hint="음식을 입력하세요"
                 android:inputType="text"
-                android:padding="8dp"/>
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/searchButton"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
                 android:textStyle="bold"
                 android:textSize="8pt"
                 android:text="검색"
@@ -79,44 +80,34 @@
         </ScrollView>
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/main_color"
         >
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ingredient"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/whitebtn"
             android:text="재료"
             android:textStyle="bold"
             android:textSize="8pt"
-            android:background="@drawable/yellowbtn"
             />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/recipe"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="레시피"
             android:textStyle="bold"
             android:textSize="8pt"
-            android:background="@drawable/yellowbtn"
+            android:background="@drawable/graybtn"
             />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/favorites"
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="즐겨찾기"
-            android:textStyle="bold"
-            android:textSize="8pt"
-            android:background="@drawable/yellowbtn"
-            />
-
     </LinearLayout>
 </LinearLayout>
