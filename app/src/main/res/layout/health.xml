@@ -50,7 +50,10 @@
                     android:format="%s"
                     android:gravity="center"
                     android:textSize="40sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/layer"/>
 
 
                 <ImageButton
@@ -67,15 +70,17 @@
                     android:id="@+id/stop"
                     android:layout_width="8dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    app:srcCompat="@drawable/star" />
+                    android:layout_weight="5"
+                    android:background="@color/cardview_shadow_end_color"
+                    app:srcCompat="@drawable/pause" />
 
                 <ImageButton
                     android:id="@+id/_button2"
                     android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
+
                     android:background="@color/cardview_shadow_end_color"
                     android:scaleType="fitCenter"
                     android:src="@drawable/rotate_36"
