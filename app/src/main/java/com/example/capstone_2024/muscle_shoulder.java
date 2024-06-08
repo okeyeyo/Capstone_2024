@@ -83,14 +83,8 @@ public class muscle_shoulder extends AppCompatActivity {
                 text = findViewById(R.id.shoul_1);
 
                 text.setVisibility(View.VISIBLE);
-                YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
-                youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
-                    @Override
-                    public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
-                        youTubePlayer.loadVideo(videoId, 0);
-                    }
-                });
+
+
                 back = findViewById(R.id.back);
                 back.setOnClickListener(new View.OnClickListener() {
                     @Override
