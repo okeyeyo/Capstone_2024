@@ -53,7 +53,6 @@ public class Health extends AppCompatActivity {
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
                 // 선택된 날짜를 문자열로 변환
                 selectedDate = year + "-" + (month + 1) + "-" + dayOfMonth;
-                Toast.makeText(Health.this, "선택된 날짜: " + selectedDate, Toast.LENGTH_SHORT).show();
             }
         });
 
