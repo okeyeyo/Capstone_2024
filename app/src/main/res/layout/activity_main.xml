@@ -88,7 +88,7 @@
                         android:textAlignment="center"
                         android:textSize="20dp"/>
                     <TextView
-                        android:id="@+id/sex"
+                        android:id="@+id/gender"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -120,25 +120,33 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1.2"
             android:background="@drawable/bmi">
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="@color/main_color" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:clickable="true"
                 android:gravity="center"
-                android:clickable="true">
+                android:orientation="horizontal">
 
 
                 <ImageButton
@@ -146,8 +154,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="60dp"
-                    android:layout_marginEnd="50dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="20"
                     android:background="@drawable/cook_imgbtn_back"
@@ -158,8 +166,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="50dp"
-                    android:layout_marginEnd="60dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginEnd="60dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="20"
                     android:background="@drawable/health_imgbtn_back"
