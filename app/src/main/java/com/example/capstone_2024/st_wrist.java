@@ -86,7 +86,7 @@ public class st_wrist extends AppCompatActivity {
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), st_sho.class);
+                        Intent intent = new Intent(getApplicationContext(), st_wrist.class);
                         startActivity(intent);
                         stopTimerAndTTS();
                     }

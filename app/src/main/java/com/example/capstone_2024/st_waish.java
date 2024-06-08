@@ -84,7 +84,7 @@ public class st_waish extends AppCompatActivity {
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), st_sho.class);
+                        Intent intent = new Intent(getApplicationContext(), st_waish.class);
                         startActivity(intent);
                         stopTimerAndTTS();
                     }
