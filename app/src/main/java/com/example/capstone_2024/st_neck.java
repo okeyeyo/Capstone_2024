@@ -86,8 +86,8 @@ public class st_neck extends AppCompatActivity {
                 circleView = findViewById(R.id.circleView);
                 ImageButton home = findViewById(R.id.home);
 
+                tts.speak(messages[messageIndex], TextToSpeech.QUEUE_FLUSH, null, null); // 타이머 시작 시 메시지 읽기
                 startTimer();
-                speakNextMessage();
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -121,17 +121,28 @@ public class st_neck extends AppCompatActivity {
                     circleView.setCircleVisible(false);
                     circleView.setRemainingTime(0); // 타이머 텍스트를 0으로 설정
                 }
-                speakNextMessage();
+                if (messageIndex < messages.length - 1) {
+                    messageIndex++; // 다음 메시지 인덱스로 이동
+                    tts.speak(messages[messageIndex], TextToSpeech.QUEUE_FLUSH, null, null);
+                    new CountDownTimer(2000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                            // 2초 동안 대기
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            // 2초가 지나면 타이머를 다시 시작
+                            if (circleView != null) {
+                                circleView.setCircleVisible(true);
+                            }
+                            startTimer();
+                        }
+                    }.start();
+                }
             }
         };
         timer.start();
-    }
-
-    private void speakNextMessage() {
-        if (messageIndex < messages.length) {
-            tts.speak(messages[messageIndex], TextToSpeech.QUEUE_FLUSH, null, null);
-            messageIndex++;
-        }
     }
 
     private void stopTimerAndTTS() {
