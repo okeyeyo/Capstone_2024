@@ -3,11 +3,15 @@ package com.example.capstone_2024;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.function.DoubleToLongFunction;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton cookbtn;
    ImageButton healthbtn;
     LinearLayout profile;
+    private TextView tv_name, tv_gender, tv_bmi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         cookbtn = findViewById(R.id.cook);
         healthbtn = findViewById(R.id.health);
         profile = findViewById(R.id.profile);
+        tv_name = findViewById(R.id.name);
+        tv_gender = findViewById(R.id.gender);
+        tv_bmi = findViewById(R.id.bmi);
+
+        loadData();
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +83,22 @@ public class MainActivity extends AppCompatActivity {
     public void openProfileActivity() {
         Intent intent = new Intent(MainActivity.this, Profile.class);
         startActivity(intent);
+    }
+
+    private  void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+        String name = sharedPreferences.getString("name", "N/A");
+        String gender = sharedPreferences.getString("gender", "N/A");
+        String height = sharedPreferences.getString("height", "0");
+        String weight = sharedPreferences.getString("weight", "0");
+
+        double heightInMeters = Double.parseDouble(height) / 100;
+        double weightInKg = Double.parseDouble(weight);
+        double bmi = weightInKg / (heightInMeters * heightInMeters);
+
+        tv_name.setText(name);
+        tv_gender.setText(gender);
+        tv_bmi.setText(String.format("%.2f",bmi));
     }
 
 }
