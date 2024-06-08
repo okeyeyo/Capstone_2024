@@ -88,7 +88,7 @@
                 android:textStyle="bold"/>
 
             <RadioGroup
-                android:id="@+id/radio_group"
+                android:id="@+id/user_gender"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
