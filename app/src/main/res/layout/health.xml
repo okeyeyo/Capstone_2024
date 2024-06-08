@@ -111,15 +111,17 @@
 
                 <TextView
                     android:id="@+id/tvAttendanceDays"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/btnAttendance"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp"
                     android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
                     android:layout_weight="1"
                     android:text="출석일수: 0일"
                     android:textSize="18sp" />
+
+
 
                 <Button
                     android:id="@+id/btnAttendance"
@@ -130,6 +132,17 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="20dp"
                     android:text="출석하기"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/main_color"/>
+                <Button
+                    android:id="@+id/resetbtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/calendarView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="리셋하기"
                     android:textColor="@color/black"
                     android:backgroundTint="@color/main_color"/>
 
