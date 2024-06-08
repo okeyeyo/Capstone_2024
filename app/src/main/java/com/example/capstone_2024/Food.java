@@ -190,6 +190,7 @@ public class Food implements Parcelable { //음식 생성자
     public void setIngredients(String ingredients){
         this.ingredients = ingredients;
     }
+
     public String getManual1() {
         return manual1;
     }

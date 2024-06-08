@@ -45,6 +45,19 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         Food food = foodList.get(position);
         holder.bind(food, listener);
         holder.nameTextView.setText(food.getName());
+        holder.bookmarkButton.setImageResource(food.isBookmarked() ? R.drawable.star : R.drawable.empty_star);
+
+        holder.bookmarkButton.setOnClickListener(v -> {
+            if (food.isBookmarked()) {
+                bookmarkManager.removeBookmark(food.getId());
+                food.setBookmarked(false); // 북마크 상태 변경
+                holder.bookmarkButton.setImageResource(R.drawable.empty_star);
+            } else {
+                bookmarkManager.addBookmark(food.getId());
+                food.setBookmarked(true); // 북마크 상태 변경
+                holder.bookmarkButton.setImageResource(R.drawable.star);
+            }
+        });
     }
 
 
@@ -64,6 +77,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         public FoodViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextView);
+            bookmarkButton = itemView.findViewById(R.id.bookmark_button);
             //ingredientsTextView = itemView.findViewById(R.id.ingredientsTextView);
         }
 

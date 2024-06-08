@@ -29,6 +29,7 @@ public class Cook_Ingredient extends AppCompatActivity {
     ImageButton homebtn;
     Button ingredientbtn;
     Button recipebtn;
+    Button favoritesbtn;
     Button find_recipebtn;
     private IngredientAdapter ingredientAdapter;
     private List<Ingredient> ingredientlist;
@@ -45,6 +46,7 @@ public class Cook_Ingredient extends AppCompatActivity {
         ingredientbtn = findViewById(R.id.ingredient);
         recipebtn = findViewById(R.id.recipe);
         find_recipebtn = findViewById(R.id.find_recipe);
+        favoritesbtn = findViewById(R.id.favorites);
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
 
@@ -97,6 +99,12 @@ public class Cook_Ingredient extends AppCompatActivity {
                 openFindRecipeActivity(ingredientlist);
             }
         });
+        favoritesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFavoritesActivity();
+            }
+        });
     }
     private void openFindRecipeActivity(List<Ingredient> ingredientlist) {
         Intent intent = new Intent(Cook_Ingredient.this, Find_recipe.class);
@@ -137,6 +145,10 @@ public class Cook_Ingredient extends AppCompatActivity {
     }
     public void openRecipeActivity() {
         Intent intent = new Intent(Cook_Ingredient.this, Cook_Recipe.class);
+        startActivity(intent);
+    }
+    public void openFavoritesActivity() {
+        Intent intent = new Intent(this, Cook_Favorites.class);
         startActivity(intent);
     }
 }
