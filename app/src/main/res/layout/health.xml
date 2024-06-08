@@ -67,6 +67,13 @@
                     android:src="@drawable/play_36" />
 
                 <ImageButton
+                    android:id="@+id/stop"
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    app:srcCompat="@drawable/star" />
+
+                <ImageButton
                     android:id="@+id/_button2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"

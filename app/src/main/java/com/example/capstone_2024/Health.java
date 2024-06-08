@@ -16,7 +16,8 @@ public class Health extends AppCompatActivity {
     ImageButton homebtn;
     Button strechbtn;
     Button musclebtn;
-    ImageButton startbtn, resetbtn;
+    ImageButton startbtn, resetbtn,stopbtn;
+    private long pauseOffset;
     Chronometer chronometer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class Health extends AppCompatActivity {
 
         startbtn = findViewById(R.id._button1);
         resetbtn = findViewById(R.id._button2);
-
+        stopbtn= findViewById(R.id.stop);
         homebtn = findViewById(R.id.home);
         strechbtn = findViewById(R.id.streching);
         musclebtn = findViewById(R.id.muscle);
@@ -34,14 +35,30 @@ public class Health extends AppCompatActivity {
         startbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chronometer.start();
+                if (chronometer != null) {
+                    chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
+                    chronometer.start();
+                }
             }
         });
 
+        stopbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (chronometer != null) {
+                    chronometer.stop();
+                    pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase();
+                }
+            }
+        });
         resetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chronometer.setBase(SystemClock.elapsedRealtime());
+                if (chronometer != null) {
+                    chronometer.stop();
+                    chronometer.setBase(SystemClock.elapsedRealtime());
+                    pauseOffset = 0;
+                }
             }
         });
 
@@ -69,6 +86,13 @@ public class Health extends AppCompatActivity {
 
     }
 
+    private void resetChronometer() {
+        if (chronometer != null) {
+            chronometer.stop();
+            chronometer.setBase(SystemClock.elapsedRealtime());
+            pauseOffset = 0;
+        }
+    }
     public void openHomeActivity() {
         Intent intent = new Intent(Health.this, MainActivity.class);
         startActivity(intent);
