@@ -25,26 +25,23 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/white">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:clickable="true">
+            android:clickable="true"
+            android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/profile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="캘린더(준비중)" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Chronometer
                     android:id="@+id/timer"
                     android:layout_width="wrap_content"
@@ -60,8 +57,8 @@
                     android:id="@+id/_button1"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_weight="1"
                     android:layout_margin="15dp"
+                    android:layout_weight="1"
                     android:background="@color/cardview_shadow_end_color"
                     android:scaleType="fitCenter"
                     android:src="@drawable/play_36" />
@@ -77,11 +74,11 @@
                     android:id="@+id/_button2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_weight="1"
                     android:layout_margin="15dp"
+                    android:layout_weight="1"
                     android:background="@color/cardview_shadow_end_color"
-                    android:src="@drawable/rotate_36"
                     android:scaleType="fitCenter"
+                    android:src="@drawable/rotate_36"
 
                     />
 
@@ -91,32 +88,74 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/tvAttendanceDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnAttendance"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="출석일수: 0일"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnAttendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/calendarView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="출석하기" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/streching"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="20dp"
-                android:textSize="8pt"
-                android:textStyle="bold"
-                android:text="스트레칭"
+                android:layout_weight="1"
                 android:background="@drawable/yellowbtn"
-                android:clickable="true"/>
+                android:clickable="true"
+                android:text="스트레칭"
+                android:textSize="8pt"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/muscle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="20dp"
-                android:textStyle="bold"
-                android:textSize="8pt"
-                android:clickable="true"
+                android:layout_weight="1"
                 android:background="@drawable/yellowbtn"
-                android:text="근력 운동" />
+                android:clickable="true"
+                android:text="근력 운동"
+                android:textSize="8pt"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

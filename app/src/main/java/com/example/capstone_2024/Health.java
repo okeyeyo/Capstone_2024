@@ -7,8 +7,14 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class Health extends AppCompatActivity {
@@ -19,6 +25,12 @@ public class Health extends AppCompatActivity {
     ImageButton startbtn, resetbtn,stopbtn;
     private long pauseOffset;
     Chronometer chronometer;
+
+    private CalendarView calendarView;
+    private TextView tvAttendanceDays;
+    private Button btnAttendance;
+    private Set<String> attendanceDays = new HashSet<>();
+    private String selectedDate = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +44,31 @@ public class Health extends AppCompatActivity {
         musclebtn = findViewById(R.id.muscle);
         chronometer = (Chronometer) findViewById(R.id.timer);
 
+        calendarView = findViewById(R.id.calendarView);
+        tvAttendanceDays = findViewById(R.id.tvAttendanceDays);
+        btnAttendance = findViewById(R.id.btnAttendance);
+
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                // 선택된 날짜를 문자열로 변환
+                selectedDate = year + "-" + (month + 1) + "-" + dayOfMonth;
+                Toast.makeText(Health.this, "선택된 날짜: " + selectedDate, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!selectedDate.isEmpty()) {
+                    attendanceDays.add(selectedDate);
+                    updateAttendanceDays();
+                    Toast.makeText(Health.this, "출석 완료: " + selectedDate, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Health.this, "날짜를 선택하세요.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         startbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +123,10 @@ public class Health extends AppCompatActivity {
 
     }
 
+    private void updateAttendanceDays() {
+        int days = attendanceDays.size();
+        tvAttendanceDays.setText("출석일수: " + days + "일");
+    }
     private void resetChronometer() {
         if (chronometer != null) {
             chronometer.stop();
