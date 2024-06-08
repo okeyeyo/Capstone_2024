@@ -99,7 +99,7 @@ public class CountdownCircleView extends View {
 
     private void init() {
         paint = new Paint();
-        paint.setColor(Color.YELLOW);
+        paint.setColor(Color.BLACK);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(20);
         paint.setAntiAlias(true);
