@@ -60,7 +60,7 @@ public class muscle_arm extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "Dlg0W_5mq98"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                         if(youTubePlayer!=null)
                             youTubePlayer.pause();
@@ -91,7 +91,7 @@ public class muscle_arm extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "Ge3_S7lRvfQ"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
@@ -120,7 +120,7 @@ public class muscle_arm extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "ObEtLS9heOo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
@@ -149,7 +149,7 @@ public class muscle_arm extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "w2JyIqOfqpc"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
@@ -178,7 +178,7 @@ public class muscle_arm extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "ZdDDuJX0-wk"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });

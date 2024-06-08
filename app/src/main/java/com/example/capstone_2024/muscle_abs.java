@@ -57,7 +57,7 @@ public class muscle_abs extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "KqnFav4Edvw"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
@@ -91,7 +91,7 @@ public class muscle_abs extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "tNFciUXMy1s"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
@@ -124,7 +124,7 @@ public class muscle_abs extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "EGTMIiSG1s4"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
@@ -157,7 +157,7 @@ public class muscle_abs extends AppCompatActivity {
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady(YouTubePlayer youTubePlayer) {
-                        String videoId = "x731KYNsPBo"; // 여기에 재생할 YouTube 동영상의 ID를 입력
+                        String videoId = "ggEVvfvvbCQ"; // 여기에 재생할 YouTube 동영상의 ID를 입력
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });
