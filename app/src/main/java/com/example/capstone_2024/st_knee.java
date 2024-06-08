@@ -4,6 +4,7 @@ import static android.widget.Toast.makeText;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,11 +25,22 @@ public class st_knee extends AppCompatActivity {
     ImageButton back;
     public TextToSpeech tts;
 
+    private CountdownCircleView circleView;
+    private String[] messages = {
+            "대퇴 사두근에 20초 동안 힘을 주세요",
+            "다리를 들어 20초 동안 자세를 유지해 주세요",
+            "대퇴 사두근을 늘려주세요",
+            "앉아서 윗몸을 앞으로 굽혀주세요",
+            "누워서 무릎을 당겨주세요"};
+
+    private CountDownTimer timer;
+    private ImageButton start;
+    private int messageIndex = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.streching_list_knee);
-
+        start = findViewById(R.id._button1);
         buttonShowDialog = findViewById(R.id.button2);
         back = findViewById(R.id.back);
 
@@ -64,10 +76,82 @@ public class st_knee extends AppCompatActivity {
             }
         });
 
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.timierview);
+                circleView = findViewById(R.id.circleView);
+                ImageButton home = findViewById(R.id.home);
+
+                tts.speak(messages[messageIndex], TextToSpeech.QUEUE_FLUSH, null, null); // 타이머 시작 시 메시지 읽기
+                startTimer();
+                home.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), st_knee.class);
+                        startActivity(intent);
+                        stopTimerAndTTS();
+                    }
+                });
+            }
+        });
+
 
 
         btn_popup_set();
     }
+    private void startTimer() {
+        timer = new CountDownTimer(20000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                if (circleView != null) {
+                    int percentage = (int) ((millisUntilFinished / 20000.0) * 100);
+                    int secondsRemaining = (int) (millisUntilFinished / 1000);
+                    circleView.updateCircleRadius(percentage);
+                    circleView.setRemainingTime(secondsRemaining);
+                }
+            }
+
+            @Override
+            public void onFinish() {
+                if (circleView != null) {
+                    circleView.setCircleVisible(false);
+                    circleView.setRemainingTime(0); // 타이머 텍스트를 0으로 설정
+                }
+                if (messageIndex < messages.length - 1) {
+                    messageIndex++; // 다음 메시지 인덱스로 이동
+                    tts.speak(messages[messageIndex], TextToSpeech.QUEUE_FLUSH, null, null);
+                    new CountDownTimer(2000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                            // 2초 동안 대기
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            // 2초가 지나면 타이머를 다시 시작
+                            if (circleView != null) {
+                                circleView.setCircleVisible(true);
+                            }
+                            startTimer();
+                        }
+                    }.start();
+                }
+            }
+        };
+        timer.start();
+    }
+
+    private void stopTimerAndTTS() {
+        if (timer != null) {
+            timer.cancel();
+        }
+        if (tts != null) {
+            tts.stop();
+        }
+    }
+
+    @Override
     public void onDestroy() {
         if (tts != null) {
             tts.stop();
@@ -75,6 +159,7 @@ public class st_knee extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
     public void showDialog(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(st_knee.this);
         LayoutInflater inflater = getLayoutInflater();
