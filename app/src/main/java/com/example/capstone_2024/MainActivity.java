@@ -88,10 +88,10 @@ public class MainActivity extends AppCompatActivity {
 
     private  void loadData() {
         SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
-        String name = sharedPreferences.getString("name", "홍길동");
-        String gender = sharedPreferences.getString("gender", "남");
-        String height = sharedPreferences.getString("height", "180");
-        String weight = sharedPreferences.getString("weight", "70");
+        String name = sharedPreferences.getString("name", "이름을 입력하세요");
+        String gender = sharedPreferences.getString("gender", "성별을 고르세요");
+        String height = sharedPreferences.getString("height", "0");
+        String weight = sharedPreferences.getString("weight", "0");
 
         Log.d("MainActivity", "Loaded Data: Name = " + name + ", Gender = " + gender + ", Height = " + height + ", Weight = " + weight);
 
