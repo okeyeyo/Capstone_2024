@@ -187,63 +187,63 @@ public class st_sho extends AppCompatActivity {
         btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("어깨 1");
-                System.out.println("1. 똑바로 서거나 앉습니다.\n" +
+                showDialog("1. 똑바로 서거나 앉습니다.\n" +
                         "2. 오른팔을 가슴 앞쪽으로 뻗어 왼쪽으로 넘깁니다.\n" +
                         "3. 왼팔로 오른팔의 팔꿈치나 상완 부분을 감싸고, 몸 쪽으로 부드럽게 당깁니다.\n" +
                         "4. 이 자세를 15-30초 동안 유지하면서 깊게 호흡합니다.\n" +
                         "5. 천천히 원래 위치로 돌아갑니다. 반대쪽 팔도 같은 방식으로 스트레칭합니다.");
+
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("어깨 2");
-                System.out.println("1. 똑바로 서거나 앉습니다.\n" +
+                showDialog("1. 똑바로 서거나 앉습니다.\n" +
                         "2. 한 팔을 등 뒤로 넘겨 손을 가능한 높이 올립니다.\n" +
                         "3. 반대쪽 손으로 등 뒤의 손목이나 팔꿈치를 잡고, 부드럽게 당깁니다.\n" +
                         "4. 20-30초 동안 유지하면서 깊게 호흡합니다.\n" +
                         "5. 천천히 원래 위치로 돌아갑니다. 반대쪽 팔도 같은 방식으로 스트레칭합니다.");
+
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("어깨 3");
-                System.out.println("1. 똑바로 서서 한 팔을 위로 들어 올립니다.\n" +
+                showDialog("1. 똑바로 서서 한 팔을 위로 들어 올립니다.\n" +
                         "2. 반대쪽 손으로 들어 올린 팔의 팔꿈치를 잡고, 부드럽게 머리 뒤쪽으로 당깁니다.\n" +
                         "3. 이 자세를 20-30초 동안 유지하면서 깊게 호흡합니다.\n" +
                         "4. 천천히 원래 위치로 돌아갑니다. 반대쪽 팔도 같은 방식으로 스트레칭합니다.");
+
             }
         });
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("어깨 4");
-                System.out.println("1. 똑바로 서서 발을 어깨 너비로 벌리고 팔을 몸 옆에 둡니다. 어깨를 편안하게 이완시킵니다.\n" +
+                showDialog("1. 똑바로 서서 발을 어깨 너비로 벌리고 팔을 몸 옆에 둡니다. 어깨를 편안하게 이완시킵니다.\n" +
                         "2. 천천히 어깨를 뒤로 당기면서 날개뼈를 서로 모읍니다. 이때 가슴이 앞으로 나오고 어깨가 뒤로 젖혀집니다.\n" +
                         "3. 날개뼈를 최대한 모은 상태에서 5-10초 동안 유지합니다.\n" +
                         "4. 천천히 원래 위치로 돌아갑니다.");
+                ;
             }
         });
         btn[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("어깨 5");
-                System.out.println("1. 벽 옆에 서서 팔꿈치를 90도로 굽히고 손바닥을 벽에 댑니다. 팔꿈치가 어깨 높이에 오도록 합니다.\n" +
+                showDialog("1. 벽 옆에 서서 팔꿈치를 90도로 굽히고 손바닥을 벽에 댑니다. 팔꿈치가 어깨 높이에 오도록 합니다.\n" +
                         "2. 벽에 댄 손을 고정한 상태에서 천천히 몸을 반대쪽으로 돌립니다. 어깨 앞쪽에 스트레칭을 느끼면서 15-30초 동안 유지합니다.\n" +
                         "3. 천천히 원래 위치로 돌아갑니다.\n" +
-                        "4. 반대쪽 어깨도 같은 방법으로 스트레칭합니다");
+                        "4. 반대쪽 어깨도 같은 방법으로 스트레칭합니다.");
+
             }
         });
         btn[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("어깨 6");
-                System.out.println("1.똑바로 서거나 앉아서 몸을 편안하게 합니다. 어깨를 이완시키고 등을 곧게 펴세요.\n" +
+                showDialog("1.똑바로 서거나 앉아서 몸을 편안하게 합니다. 어깨를 이완시키고 등을 곧게 펴세요.\n" +
                         "2. 팔을 옆으로 뻗은 후 천천히 팔을 앞으로 돌리기 시작합니다.\n" +
                         "3. 작은 원을 그리면서 점점 원의 크기를 키웁니다.\n" +
                         "4. 0-15회 회전한 후 반대 방향으로도 10-15회 회전합니다.");
+
             }
         });
 
