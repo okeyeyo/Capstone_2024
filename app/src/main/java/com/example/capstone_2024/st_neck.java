@@ -192,36 +192,61 @@ public class st_neck extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 1");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다.\n" +
+                        "2. 천천히 머리를 뒤로 젖혀서 천장을 바라봅니다. 이 자세를 10-15초 동안 유지하면서 깊게 호흡합니다.\n" +
+                        "3. 천천히 머리를 앞으로 숙여 턱이 가슴에 닿도록 합니다. 이 자세를 10-15초 동안 유지하면서 깊게 호흡합니다.\n" +
+                        "4. 천천히 머리를 원래 위치로 되돌립니다.");
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 2");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다.\n" +
+                        "2. 천천히 머리를 오른쪽으로 돌려서 턱이 오른쪽 어깨에 가깝게 갑니다. 이 자세를 10-15초 동안 유지합니다.\n" +
+                        "3. 천천히 머리를 왼쪽으로 돌려서 턱이 왼쪽 어깨에 가깝게 갑니다. 이 자세를 10-15초 동안 유지합니다.\n" +
+                        "4. 천천히 머리를 원래 위치로 되돌립니다.");
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 3");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다.\n" +
+                        "2. 머리를 부드럽게 오른쪽 어깨 쪽으로 기울입니다. 목 왼쪽에 스트레칭을 느끼면서 15-30초 동안 유지합니다.\n" +
+                        "3. 머리를 부드럽게 왼쪽 어깨 쪽으로 기울입니다. 목 오른쪽에 스트레칭을 느끼면서 15-30초 동안 유지합니다.\n" +
+                        "4. 천천히 머리를 원래 위치로 되돌립니다.");
+
             }
         });
         btn[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 4");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다.\n" +
+                        "2. 양손을 머리 뒤에 깍지 끼고 놓습니다.\n" +
+                        "3. 손으로 머리를 부드럽게 앞으로 당겨서 턱이 가슴에 닿도록 합니다. 목 뒤쪽과 어깨 윗부분에 스트레칭을 느끼면서 15-30초 동안 유지합니다.\n" +
+                        "4. 천천히 머리를 원래 위치로 되돌립니다.");
             }
         });
         btn[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 5");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다.\n" +
+                        "2. 왼손을 머리 위로 가져가 오른쪽 귀 가까이에 놓습니다.\n" +
+                        "3. 왼손으로 머리를 부드럽게 당겨 왼쪽 어깨 쪽으로 기울입니다. 목 오른쪽에 스트레칭을 느끼면서 15-30초 동안 유지합니다.\n" +
+                        "4. 이때, 오른쪽 어깨는 이완된 상태로 아래쪽으로 내려가게 합니다. 천천히 머리를 원래 위치로 되돌립니다.");
             }
         });
         btn[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("Text for Button 6");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다.\n" +
+                        "2. 오른손을 머리 위로 가져가 왼쪽 귀 가까이에 놓습니다.\n" +
+                        "3. 오른손으로 머리를 부드럽게 당겨 오른쪽 어깨 쪽으로 기울입니다. 목 왼쪽에 스트레칭을 느끼면서 15-30초 동안 유지합니다.\n" +
+                        "4. 이때, 왼쪽 어깨는 이완된 상태로 아래쪽으로 내려가게 합니다. 천천히 머리를 원래 위치로 되돌립니다");
             }
         });
     }

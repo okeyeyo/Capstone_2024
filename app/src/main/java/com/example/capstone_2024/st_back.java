@@ -184,18 +184,35 @@ public class st_back extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog("등 1");
+                System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다. 어깨를 이완시키고 등을 곧게 펴세요.\n" +
+                        "2. 어깨를 천천히 앞으로 돌리면서 작은 원을 그립니다.\n" +
+                        "3. 점차 원의 크기를 키우면서 10-15회 회전합니다.\n" +
+                        "4. 어깨를 천천히 뒤로 돌리면서 작은 원을 그립니다.\n" +
+                        "5. 점차 원의 크기를 키우면서 10-15회 회전합니다.");
+
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("등 2");
+                System.out.println("1. 등을 곧게 펴고 어깨를 뒤로 넣습니다.\n" +
+                        "2. 양손을 등 뒤로 가져가서 손등을 마주보도록 합니다.\n" +
+                        "3. 어깨 너비 이상으로 손을 넓게 벌려서 양쪽 손을 만나도록 합니다.\n" +
+                        "4. 양손을 만나는 부분에서 약간의 압력을 가해줍니다.\n" +
+                        "5. 가급적 어깨를 뒤로 넣으면서 팔을 더 뒤쪽으로 가져갑니다. 이 자세에서 15-30초 정도 유지합니다.\n" +
+                        "6. 숨을 내쉬면서 자연스럽게 풀어줍니다.");
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog("등 3");
+                System.out.println("1. 서서 어깨를 편안하게 펴고 양손을 몸 옆에 내려놓습니다.\n" +
+                        "2. 천천히 어깨를 뒤로 모아봅니다.\n" +
+                        "3. 어깨 뒤쪽에 있는 근육들을 느낄 수 있을 때까지 모으고 최대한 느슨하게 해줍니다. 5-10초 동안 이 자세를 유지합니다.\n" +
+                        "4. 날개뼈를 모은 상태에서 천천히 어깨를 앞으로 내밀어 느슨하게 해줍니다.\n" +
+                        "5. 가볍게 흔들어서 어깨와 등 근육을 완전히 이완시켜줍니다.");
             }
         });
     }
