@@ -326,19 +326,30 @@ public class st_ankle extends AppCompatActivity {   //발목
         btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("발목 1");
+                showDialog("1. 한쪽 다리를 앞으로 뻗고 다리 근육을 편안하게 유지합니다.\n" +
+                        "2. 다리를 편안하게 놓은 상태에서 발목을 저항을 느끼는 정도까지 천천히 위로 당겨줍니다.\n" +
+                        "3. 발목을 당기면서 발바닥이 아래쪽을 향하도록 합니다.\n" +
+                        "4. 발목을 최대한까지 당겼을 때 편안한 상태에서 약 15-30초 동안 유지합니다.\n" +
+                        "5. 이후 천천히 원래 자세로 돌아갑니다.\n");
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("발목 2");
+                showDialog("1. 한 쪽 다리를 앞으로 뻗고 다리 근육을 편안하게 유지합니다.\n" +
+                        "2. 발을 바닥에 놓고 발뒤꿈치를 아래로 내립니다. 발뒤꿈치가 바닥에 닿지 않을 수도 있습니다. 그렇더라도 발목에 느껴지는 적당한 스트레칭을 유지합니다.\n" +
+                        "3. 발목을 내린 상태에서 약 15-30초 동안 유지합니다.\n" +
+                        "4. 이후 천천히 원래 자세로 돌아갑니다.\n");
             }
         });
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("발목 3");
+                showDialog("1. 발을 바닥에 놓고 발뒤꿈치를 중심으로 왼쪽으로 천천히 돌립니다. 이때 발끝이 왼쪽으로 향하도록 합니다.\n" +
+                        "2. 최대한 돌린 상태에서 약 15-30초 동안 유지합니다.\n" +
+                        "3. 돌려둔 발목을 반대 방향인 오른쪽으로 천천히 돌려줍니다.\n" +
+                        "4. 최대한 돌린 상태에서 약 15-30초 동안 유지합니다.\n" +
+                        "5. 이후 천천히 원래 자세로 돌아갑니다.\n");
             }
         });
     }
