@@ -166,6 +166,7 @@ public class st_back extends AppCompatActivity {
 
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
+
         TextView dialogText = dialogView.findViewById(R.id.text);
         dialogText.setText(message);
 
@@ -178,11 +179,36 @@ public class st_back extends AppCompatActivity {
         });
         tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
     }
+    public void showDialogtitle(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(st_back.this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.st_popup, null);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+
+        TextView dialogText = dialogView.findViewById(R.id.text);
+        dialogText.setText(message);
+
+        Button buttonOk = dialogView.findViewById(R.id.button_ok);
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+    }
 
     public void btn_popup_set() {
         btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 showDialog("등 1");
                 System.out.println("1. 똑바로 서거나 앉아서 몸을 편안하게 합니다. 어깨를 이완시키고 등을 곧게 펴세요.\n" +
                         "2. 어깨를 천천히 앞으로 돌리면서 작은 원을 그립니다.\n" +
@@ -207,12 +233,12 @@ public class st_back extends AppCompatActivity {
         btn[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog("등 3");
-                System.out.println("1. 서서 어깨를 편안하게 펴고 양손을 몸 옆에 내려놓습니다.\n" +
+                showDialog("1. 서서 어깨를 편안하게 펴고 양손을 몸 옆에 내려놓습니다.\n" +
                         "2. 천천히 어깨를 뒤로 모아봅니다.\n" +
                         "3. 어깨 뒤쪽에 있는 근육들을 느낄 수 있을 때까지 모으고 최대한 느슨하게 해줍니다. 5-10초 동안 이 자세를 유지합니다.\n" +
                         "4. 날개뼈를 모은 상태에서 천천히 어깨를 앞으로 내밀어 느슨하게 해줍니다.\n" +
                         "5. 가볍게 흔들어서 어깨와 등 근육을 완전히 이완시켜줍니다.");
+
             }
         });
     }
