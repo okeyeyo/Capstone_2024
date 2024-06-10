@@ -191,7 +191,7 @@ public class st_knee extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+      //  tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
     }
 
     public void btn_popup_set(){

@@ -186,7 +186,7 @@ public class st_back extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+       // tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
     }
     public void showDialogtitle(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(st_back.this);

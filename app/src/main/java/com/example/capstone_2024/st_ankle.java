@@ -329,7 +329,7 @@ public class st_ankle extends AppCompatActivity {   //발목
                 dialog.dismiss();
             }
         });
-        tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+
     }
 
     public void btn_popup_set() {
@@ -337,6 +337,7 @@ public class st_ankle extends AppCompatActivity {   //발목
             @Override
             public void onClick(View v) {
                 showDialog("발목 1");
+
             }
         });
         btn[1].setOnClickListener(new View.OnClickListener() {
