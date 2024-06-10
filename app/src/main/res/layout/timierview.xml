@@ -22,6 +22,8 @@
             android:src="@drawable/main_logo" />
     </LinearLayout>
 
+
+
     <com.example.capstone_2024.CountdownCircleView
         android:id="@+id/circleView"
         android:layout_width="354dp"
@@ -31,6 +33,20 @@
         android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/backback"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="344dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/backbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

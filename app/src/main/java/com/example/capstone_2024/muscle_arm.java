@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,16 @@ public class muscle_arm extends AppCompatActivity {
         }
 
         btn_link_set();
+        ImageButton home = findViewById(R.id.home);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     public void btn_link_set(){
@@ -55,6 +66,16 @@ public class muscle_arm extends AppCompatActivity {
                 TextView text;
                 text = findViewById(R.id.arm_1);
                 text.setVisibility(View.VISIBLE);
+                ImageButton home = findViewById(R.id.home);
+
+                home.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }
+                });
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -86,6 +107,16 @@ public class muscle_arm extends AppCompatActivity {
                 TextView text;
                 text = findViewById(R.id.arm_2);
                 text.setVisibility(View.VISIBLE);
+                ImageButton home = findViewById(R.id.home);
+
+                home.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }
+                });
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -116,6 +147,16 @@ public class muscle_arm extends AppCompatActivity {
                 text = findViewById(R.id.arm_3);
                 text.setVisibility(View.VISIBLE);
 
+                ImageButton home = findViewById(R.id.home);
+
+                home.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }
+                });
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                     @Override
@@ -143,7 +184,16 @@ public class muscle_arm extends AppCompatActivity {
                 TextView text;
                 text = findViewById(R.id.arm_4);
                 text.setVisibility(View.VISIBLE);
+                ImageButton home = findViewById(R.id.home);
 
+                home.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }
+                });
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -173,6 +223,16 @@ public class muscle_arm extends AppCompatActivity {
                 TextView text;
                 text = findViewById(R.id.arm_5);
                 text.setVisibility(View.VISIBLE);
+                ImageButton home = findViewById(R.id.home);
+
+                home.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }
+                });
 
                 YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
                 youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {

@@ -83,10 +83,19 @@ public class st_wrist extends AppCompatActivity {
 
                 tts.speak(messages[messageIndex], TextToSpeech.QUEUE_FLUSH, null, null); // 타이머 시작 시 메시지 읽기
                 startTimer();
-                home.setOnClickListener(new View.OnClickListener() {
+                ImageButton backback = findViewById(R.id.backback);
+                backback.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(getApplicationContext(), st_wrist.class);
+                        startActivity(intent);
+                        stopTimerAndTTS();
+                    }
+                });
+                home.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         stopTimerAndTTS();
                     }
